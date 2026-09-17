@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design, analysis, fabrication, and physical validation of a low-cost PVC knee scooter.">
+  <title>PVC Knee Scooter - Apolonio Ordaz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">All Projects</a>
+        <a href="../Resume/Apolonio%20Ordaz%20Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <div class="nav-title">Apolonio Ordaz</div>
+      <div class="nav-socials">
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="project-page fea-page scooter-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+    <h1>PVC Knee Scooter</h1>
+    <p class="project-subtitle">Mechanical design-build | ME 328 | Cal Poly San Luis Obispo</p>
+
+    <div class="fea-tags" aria-label="Project skills">
+      <span class="fea-tag">Mechanical Design</span>
+      <span class="fea-tag">Hand Calculations</span>
+      <span class="fea-tag">Finite Element Analysis</span>
+      <span class="fea-tag">Prototype Fabrication</span>
+      <span class="fea-tag">Physical Validation</span>
+    </div>
+
+    <figure class="fea-hero">
+      <img src="../images/Scooter Project/knee-scooter-outdoor-hero.jpg" alt="Completed white PVC knee scooter outdoors, showing the padded knee platform, steering column, and wheel layout">
+    </figure>
+
+    <p class="fea-intro">
+      Working with Daniel Mendes, Chananeth Manava, and Hong Dang, I designed, analyzed, built, and tested a low-cost knee scooter from Schedule 40 PVC. The project moved from anthropometric requirements and hand calculations through two FEA iterations, physical fabrication, and test-based validation.
+    </p>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">01</span>
+        <div>
+          <h2>Design requirements and architecture</h2>
+          <p class="fea-section-kicker">A stable, low-cost alternative to crutches</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          The design supports an injured leg on a padded platform while the rider pushes with their healthy leg and steers through a rotating front column. A wide front track improves lateral stability, while a compact rear wheel assembly leaves clearance for the rider's pushing leg.
+        </p>
+        <p>
+          The final configuration uses a rectangular, truss-like PVC frame to distribute knee loads and limit bending. Cross fittings support the knee platform, and bored end caps create a pivot for the steering column. The geometry was sized from anthropometric measurements rather than selected by eye.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>$173.73</strong>
+          <span>Reported prototype material cost</span>
+        </div>
+        <div class="fea-stat">
+          <strong>3 cases</strong>
+          <span>Normal, backpack, and handlebar loads</span>
+        </div>
+        <div class="fea-stat">
+          <strong>1 &amp; 1.5 in</strong>
+          <span>Schedule 40 PVC sizes used</span>
+        </div>
+      </div>
+
+      <div class="fea-figure-grid">
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-sketch.jpg" alt="Dimensioned hand sketch of the selected knee scooter configuration">
+          <figcaption>The selected concept established the wheel layout, frame proportions, and knee-pad location.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-cad.jpg" alt="CAD model of the PVC knee scooter frame and steering column">
+          <figcaption>The CAD model translated the hand sketch into a geometry suitable for structural analysis.</figcaption>
+        </figure>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Design decision:</strong> Two earlier concepts were rejected because they required custom parts and more complex fabrication. The selected PVC architecture could be built with readily available fittings and student-shop tools.
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">02</span>
+        <div>
+          <h2>Load cases and hand calculations</h2>
+          <p class="fea-section-kicker">Bounding normal use and foreseeable misuse</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          I evaluated three scenarios: the rider's weight on the knee platform, the rider plus a backpack, and an abuse case with a 10 lb bag hanging from each handlebar end. The heavier knee-platform case governed the frame calculation, while the bag load isolated bending and deflection in the handlebars.
+        </p>
+        <p>
+          With a safety factor of two applied, the knee support was checked under a 246 lb design load. Simplified beam theory predicted 0.080 in of platform deflection. For the handlebar case, a 90 lb-in bending moment produced an estimated 262 psi maximum stress and 0.013 in tip deflection.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>246 lb</strong>
+          <span>Factored knee-platform design load</span>
+        </div>
+        <div class="fea-stat">
+          <strong>0.080 in</strong>
+          <span>Calculated knee-support deflection</span>
+        </div>
+        <div class="fea-stat">
+          <strong>262 psi</strong>
+          <span>Calculated handlebar bending stress</span>
+        </div>
+      </div>
+
+      <div class="fea-table-wrap">
+        <table class="fea-table">
+          <thead>
+            <tr>
+              <th>Load case</th>
+              <th>Purpose</th>
+              <th>Applied condition</th>
+              <th>Primary check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Normal use</td>
+              <td>Daily operation</td>
+              <td>User load on knee pad</td>
+              <td>Frame stiffness</td>
+            </tr>
+            <tr>
+              <td>User + backpack</td>
+              <td>Maximum expected use</td>
+              <td>246 lb factored design load</td>
+              <td>Knee-platform deflection</td>
+            </tr>
+            <tr>
+              <td>Handlebar abuse</td>
+              <td>Foreseeable misuse</td>
+              <td>10 lb at each handlebar end</td>
+              <td>Steering-column bending</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">03</span>
+        <div>
+          <h2>FEA-driven optimization</h2>
+          <p class="fea-section-kicker">Reducing excess strength without sacrificing safety</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          The first solid-element model used 1.5 in PVC throughout, fixed the four wheel-mount locations, and applied 150 lb over the knee-support area plus 10 lb at each handlebar end. Its maximum stress was approximately 0.65 ksi, corresponding to a safety factor near 10 against the reported 6-8 ksi ultimate strength of PVC.
+        </p>
+        <p>
+          Because the first design carried more margin than necessary, the steering column and handlebars were reduced to 1 in PVC. The final model predicted approximately 0.905 ksi maximum stress and 0.149 in maximum displacement, with the most critical region located where the steering column meets the front crossbar.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>0.905 ksi</strong>
+          <span>Final FEA maximum stress</span>
+        </div>
+        <div class="fea-stat">
+          <strong>0.149 in</strong>
+          <span>Final predicted maximum displacement</span>
+        </div>
+        <div class="fea-stat">
+          <strong>6-7</strong>
+          <span>Final simulated safety-factor range</span>
+        </div>
+      </div>
+
+      <div class="fea-figure-grid">
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-fea-1.jpg" alt="Stress and displacement results for the initial all-1.5-inch PVC scooter model">
+          <figcaption>The initial 1.5 in model produced a safety factor near 10, indicating room to reduce material.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-fea-2.jpg" alt="Stress and displacement results for the final scooter model with a 1-inch steering column">
+          <figcaption>The final iteration used a smaller steering column and retained a safety factor between 6 and 7.</figcaption>
+        </figure>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Key lesson:</strong> The analysis was not only a pass/fail check. Comparing the model with hand calculations gave enough confidence to remove unnecessary material while preserving a conservative margin for a brittle structure.
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">04</span>
+        <div>
+          <h2>Fabrication and prototype testing</h2>
+          <p class="fea-section-kicker">Turning a simulation model into a working mobility device</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          The frame was dry-fit first so dimensions, alignment, and wheel placement could be corrected before permanent bonding. After verification, the structural joints were primed and glued, the steering column was left free to rotate, threaded rod formed the wheel axles, and foam over a wood platform created the knee support.
+        </p>
+        <p>
+          Testing covered static load capacity, handlebar loading, structural integrity, turning, and rider fit. The unglued frame supported roughly twice the intended weight with little visible deflection. A later 20 lb handlebar load produced about 0.0625 in of measured deflection, and no measurable main-frame deflection was observed at the intended user load.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>~2x</strong>
+          <span>Intended load supported in testing</span>
+        </div>
+        <div class="fea-stat">
+          <strong>20 lb</strong>
+          <span>Total handlebar abuse load</span>
+        </div>
+        <div class="fea-stat">
+          <strong>0.0625 in</strong>
+          <span>Measured handlebar deflection</span>
+        </div>
+      </div>
+
+      <div class="fea-figure-grid scooter-photo-grid">
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-outdoor-angle.jpg" alt="Completed PVC knee scooter standing outdoors">
+          <figcaption>Completed prototype showing the wide wheelbase and padded knee platform.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-indoor-detail.jpg" alt="Close view of the finished PVC scooter frame and steering column">
+          <figcaption>Close-up of the glued frame joints, steering column, and wheel mounting.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-loaded-side.jpg" alt="Side view of the PVC knee scooter carrying a backpack from the handlebars">
+          <figcaption>A loaded backpack recreated the handlebar abuse case during physical testing.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/Scooter Project/knee-scooter-loaded-rear.jpg" alt="Rear view of the loaded PVC knee scooter">
+          <figcaption>The rear view shows rider clearance and the backpack load path into the steering assembly.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">05</span>
+        <div>
+          <h2>Validation and next iteration</h2>
+          <p class="fea-section-kicker">Comparing prediction, observation, and user feedback</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          Both FEA and physical testing identified the handlebar ends as the most flexible region. The measured 0.0625 in displacement was less than half of the 0.149 in prediction, so the model was conservative while still capturing the correct deformation pattern. The extra stiffness likely came from glued fittings and local reinforcement that were simplified in the simulation.
+        </p>
+        <p>
+          Physical testing also exposed issues the structural model could not: dry-fit joints twisted during sharp turns, fitting stack-up made the scooter too tall for the original user, and the steering-column connection remained the main source of wobble. A future version should add adjustable handlebar and knee-platform heights, reinforce the steering pivot, use aluminum tubing for durability, and include a hand-operated brake.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>0.149 in</strong>
+          <span>FEA-predicted handlebar displacement</span>
+        </div>
+        <div class="fea-stat">
+          <strong>0.0625 in</strong>
+          <span>Physically measured displacement</span>
+        </div>
+        <div class="fea-stat">
+          <strong>&lt; 50%</strong>
+          <span>Measured result relative to prediction</span>
+        </div>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Engineering takeaway:</strong> Hand calculations bounded the problem, FEA revealed the critical regions, and prototype testing validated the deformation pattern while uncovering assembly and ergonomic issues that the model could not represent.
+      </div>
+
+      <div class="fea-reports" aria-label="Technical report">
+        <a class="fea-report-link" href="Scooter%20Sources/ME328%20Final%20Scooter%20Report.pdf" target="_blank" rel="noopener">Read the complete ME 328 final report &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Apolonio Ordaz. Built with HTML, CSS, and JS.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

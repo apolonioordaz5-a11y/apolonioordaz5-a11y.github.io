@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SolidWorks assembly and motion-study case study for an automated indexed bottling station.">
+  <title>Bottling Station - Apolonio Ordaz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">All Projects</a>
+        <a href="../Resume/Apolonio%20Ordaz%20Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <div class="nav-title">Apolonio Ordaz</div>
+      <div class="nav-socials">
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="project-page fea-page bottling-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+    <h1>Bottling Station</h1>
+    <p class="project-subtitle">SolidWorks assembly and motion analysis</p>
+
+    <div class="fea-tags" aria-label="Project skills">
+      <span class="fea-tag">SolidWorks</span>
+      <span class="fea-tag">Assembly Design</span>
+      <span class="fea-tag">Mechanical Mates</span>
+      <span class="fea-tag">Motion Study</span>
+      <span class="fea-tag">System Verification</span>
+    </div>
+
+    <figure class="fea-hero bottling-hero" id="motion-study">
+      <video class="bottling-video" controls autoplay muted loop playsinline preload="metadata" poster="../images/Bottleing%20Station/bottling%20station%20drawing.png" aria-label="SolidWorks motion study of the automated bottling station">
+        <source src="../images/Bottleing%20Station/Bottling%20Station.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+    </figure>
+
+    <p class="fea-intro">
+      This project brought a collection of individual SolidWorks components together into a coordinated mechanical system. I assembled the station, constrained its moving parts, and built a motion study to evaluate how bottles advance through an indexed operating sequence.
+    </p>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">01</span>
+        <div>
+          <h2>System architecture</h2>
+          <p class="fea-section-kicker">From individual components to one coordinated assembly</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          The station centers on a rotating indexing mechanism that moves bottles between operating positions. The frame, guides, rotating plate, and surrounding mechanisms must share a common layout so each bottle arrives at the next stage in a predictable position.
+        </p>
+        <p>
+          Rather than treating each component as an isolated model, the assembly was organized around the bottle path and the interfaces between moving parts. This made the system sequence easier to understand and exposed alignment dependencies early.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid bottling-focus-grid">
+        <div class="fea-stat">
+          <strong>Assembly</strong>
+          <span>Combine the supplied components into a complete station</span>
+        </div>
+        <div class="fea-stat">
+          <strong>Indexing</strong>
+          <span>Advance bottles through repeatable operating positions</span>
+        </div>
+        <div class="fea-stat">
+          <strong>Sequence</strong>
+          <span>Coordinate motion across the complete mechanism</span>
+        </div>
+      </div>
+
+      <figure class="fea-figure bottling-drawing">
+        <img src="../images/Bottleing%20Station/bottling%20station%20drawing.png" alt="Orthographic and isometric drawing views of the bottling station assembly">
+        <figcaption>Top, front, and isometric views communicate the station layout and the relationship between the indexing plate and supporting mechanisms.</figcaption>
+      </figure>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">02</span>
+        <div>
+          <h2>Assembly and constraint strategy</h2>
+          <p class="fea-section-kicker">Controlling motion without over-constraining the model</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          The primary modeling task was defining how the supplied parts relate to one another. SolidWorks mates established the fixed structure, located rotating components on their axes, and preserved only the degrees of freedom needed for the mechanism to cycle.
+        </p>
+        <p>
+          Building the assembly in functional groups made troubleshooting more manageable. Each mechanism could be checked locally before it was evaluated as part of the full station, reducing the chance that one incorrect mate would lock or destabilize the entire model.
+        </p>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Key challenge:</strong> An assembly can appear correctly positioned while still having the wrong mechanical behavior. The mate strategy had to represent how each component should move, not only where it should sit in a static view.
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">03</span>
+        <div>
+          <h2>Motion study and verification</h2>
+          <p class="fea-section-kicker">Evaluating interaction across a complete operating cycle</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          Once the assembly behavior was defined, I created a motion study to drive the indexing sequence and observe the parts as a system. The animation made it possible to review timing, alignment, clearances, and component interaction in a way that a static model could not.
+        </p>
+        <p>
+          The study also served as a communication tool. Watching the mechanism cycle makes the station's intended operation immediately understandable and provides a repeatable way to review problem areas before committing to a physical build.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid bottling-process-grid" aria-label="Motion study workflow">
+        <div class="fea-stat">
+          <strong>01</strong>
+          <span>Define the moving relationships and available degrees of freedom</span>
+        </div>
+        <div class="fea-stat">
+          <strong>02</strong>
+          <span>Drive the mechanism through its indexed operating sequence</span>
+        </div>
+        <div class="fea-stat">
+          <strong>03</strong>
+          <span>Review alignment, clearances, and mechanical interaction</span>
+        </div>
+      </div>
+
+      <a class="bottling-video-link" href="#motion-study">Replay the motion study &uarr;</a>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">04</span>
+        <div>
+          <h2>Engineering communication</h2>
+          <p class="fea-section-kicker">Explaining both geometry and behavior</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          The final deliverables pair conventional drawing views with the motion study. The drawing documents the overall arrangement from multiple perspectives, while the animation explains the sequence and interaction that cannot be captured on a single sheet.
+        </p>
+        <p>
+          This project strengthened my understanding of assembly hierarchy, mechanical mates, motion studies, and system-level verification. Most importantly, it reinforced that a successful digital assembly must communicate how the design behaves as clearly as it communicates what the design looks like.
+        </p>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Takeaway:</strong> Motion analysis turns an assembly from a collection of correctly placed parts into a testable mechanical system. It creates an early opportunity to find constraint, alignment, and interaction problems before fabrication.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Apolonio Ordaz. Built with HTML, CSS, and JS.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

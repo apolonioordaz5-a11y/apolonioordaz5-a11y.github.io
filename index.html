@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apolonio Ordaz — Portfolio</title>
+
+  <!-- style.css controls everything visual: colors, spacing, fonts -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAV BAR ============ -->
+  <!-- A <header> holding a <nav> is the standard, semantic way to build a top bar -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="Projects/timeline.html">Timeline</a>
+      </div>
+      <div class="nav-title">Apolonio Ordaz</div>
+      <div class="nav-socials">
+        <a href="Resume/Apolonio Ordaz Resume.pdf" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <!-- id="home" lets the nav link "Home" jump straight here -->
+  <section id="home" class="hero">
+    <div class="hero-photo">
+      <div class="hero-carousel" aria-label="Photo gallery">
+        <button class="carousel-button carousel-button--prev" type="button" aria-label="Previous photo">&#10094;</button>
+        <img
+          src="images/Me pics/Hiking Image 1.JPG"
+          alt="Apolonio hiking outdoors"
+          class="carousel-image active"
+        >
+        <img
+          src="images/Me pics/Hiking Image 2.jpg"
+          alt="Apolonio hiking outdoors"
+          class="carousel-image"
+        >
+        <img
+          src="images/Me pics/AO Headshot 1.jpg"
+          alt="Apolonio headshot"
+          class="carousel-image"
+        >
+        <img
+          src="images/Me pics/Glasse HEadshot.JPG"
+          alt="Apolonio wearing glasses headshot"
+          class="carousel-image"
+        >
+        <button class="carousel-button carousel-button--next" type="button" aria-label="Next photo">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <h1>I'm Apolonio Ordaz,<br>a Mechanical Engineering Student.</h1>
+      <p>
+        I'm a mechanical engineering student at Cal Poly San Luis Obispo, working on the
+        Baja SAE Racing Team's rear suspension subteam. I recently completed a machine shop
+        internship at Vandenberg Space Force Base, and I work as an engineering and math tutor.
+      </p>
+      <p>
+        Scroll down to see the projects I've built and worked on.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" class="btn">LinkedIn</a>
+        <a href="#projects" class="btn">Projects</a>
+        <a href="Resume/Apolonio Ordaz Resume.pdf" target="_blank" class="btn">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-card-inner project-card-inner--image-left">
+          <div class="project-card-image project-card-image--fea">
+            <img src="images/FEA/stress-concentration-hero.png" alt="Finite element stress contour around a fillet">
+          </div>
+          <div class="project-card-content">
+            <h3>Finite Element Analysis Studies</h3>
+            <p>Validated SolidWorks models against hand calculations, studied mesh convergence and boundary conditions, and applied FEA to structural optimization, stress concentrations, and buckling.</p>
+            <a href="Projects/fea-analysis.html">View project &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner project-card-inner--image-left">
+          <div class="project-card-image project-card-image--ncas">
+            <img src="images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode simulated Mars mission poster">
+          </div>
+          <div class="project-card-content">
+            <h3>NASA NCAS Mission Experience</h3>
+            <p>Progressed from researching Orion and NASA mission systems to leading a multidisciplinary simulated Mars mission as project manager.</p>
+            <a href="Projects/ncas.html">View project &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" hidden>
+        <div class="project-card-inner project-card-inner--image-left">
+          <div class="project-card-image project-card-image--vandenberg">
+            <span>Internship</span>
+          </div>
+          <div class="project-card-content">
+            <h3>Vandenberg Space Force Base Internship</h3>
+            <p>Placeholder description. Machine shop internship, CSWA cert, DFM work, etc.</p>
+            <a href="Projects/VandenBerg.html" target="_blank">View project &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner project-card-inner--image-left">
+          <div class="project-card-image project-card-image--scooter">
+            <img src="images/Scooter Project/knee-scooter-outdoor-hero.jpg" alt="Completed white PVC knee scooter outdoors">
+          </div>
+          <div class="project-card-content">
+            <h3>PVC Knee Scooter</h3>
+            <p>Low-cost knee scooter design built for mobility support with a PVC frame and stability-focused geometry.</p>
+            <a href="Projects/knee-scooter.html">View project &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner project-card-inner--image-left">
+          <div class="project-card-image project-card-image--placeholder">
+            <img src="images/Bottle Carrier/Fulll Prototype.jpg" alt="Bottle carrier prototype image">
+          </div>
+          <div class="project-card-content">
+            <h3>Ergonomic Bottle Carrier and Inverter Prototype</h3>
+            <p>Designed and built a mobile carrying device to safely transport and invert 5-gallon water bottles, going through the full engineering design process from user interviews to a working prototype.</p>
+            <a href="Projects/Project%203.html">View project &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner project-card-inner--image-left">
+          <div class="project-card-image project-card-image--bottling">
+            <video autoplay muted loop playsinline preload="metadata" poster="images/Bottleing%20Station/bottling%20station%20drawing.png" aria-label="Bottling station SolidWorks motion study preview">
+              <source src="images/Bottleing%20Station/Bottling%20Station.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="project-card-content">
+            <h3>Bottling Station</h3>
+            <p>SolidWorks assembly and motion analysis project focused on an automated bottling system with indexed motion and mechanical interaction analysis.</p>
+            <a href="Projects/Bottling%20Station.html">View project &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / TIMELINE SECTION ============ -->
+  <section class="about-section" id="about">
+    <div class="about-plaque">
+      <p class="about-kicker">About Me</p>
+      <h2>My story</h2>
+
+      <div class="about-content">
+        <p>
+          I’m Apolonio Ordaz, a mechanical engineering student at Cal Poly San Luis Obispo.
+          My path has included hands-on work in construction, leadership in coaching, tutoring,
+          and engineering projects that connect problem-solving with real-world fabrication.
+        </p>
+
+        <div class="timeline-summary">
+          <div class="timeline-row">
+            <span>2026</span>
+            <p>Vandenberg internship in rapid prototyping and manufacturing</p>
+          </div>
+          <div class="timeline-row">
+            <span>2025</span>
+            <p>Cal Poly Mechanical Engineering student and Baja SAE member</p>
+          </div>
+          <div class="timeline-row">
+            <span>2024</span>
+            <p>Engineering / math tutor and campus leadership</p>
+          </div>
+          <div class="timeline-row">
+            <span>2023</span>
+            <p>Independent contractor and shift leader roles</p>
+          </div>
+          <div class="timeline-row">
+            <span>2022</span>
+            <p>General Builder Supplies — Store Associate</p>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="Projects/timeline.html" class="btn">View full timeline</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Apolonio Ordaz. Built with HTML, CSS, and JS.</p>
+  </footer>
+
+  <!-- script.js runs after the page loads -->
+  <script src="script.js"></script>
+</body>
+</html>

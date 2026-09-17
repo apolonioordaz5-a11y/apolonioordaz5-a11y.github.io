@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apolonio Ordaz's finite element analysis studies in model validation, structural optimization, stress concentrations, and buckling.">
+  <title>Finite Element Analysis Studies - Apolonio Ordaz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">All Projects</a>
+        <a href="../Resume/Apolonio%20Ordaz%20Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <div class="nav-title">Apolonio Ordaz</div>
+      <div class="nav-socials">
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="project-page fea-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+    <h1>Finite Element Analysis Studies</h1>
+    <p class="project-subtitle">SolidWorks Simulation | ME 328 | Cal Poly San Luis Obispo</p>
+
+    <div class="fea-tags" aria-label="Project skills">
+      <span class="fea-tag">Model Validation</span>
+      <span class="fea-tag">Mesh Convergence</span>
+      <span class="fea-tag">Structural Optimization</span>
+      <span class="fea-tag">Stress Concentrations</span>
+      <span class="fea-tag">Buckling</span>
+    </div>
+
+    <figure class="fea-hero">
+      <img src="../images/FEA/stress-concentration-hero.png" alt="SolidWorks von Mises stress contour showing a stress concentration at a fillet">
+    </figure>
+
+    <p class="fea-intro">
+      Finite element analysis is useful only when the model represents the real structure and its results can be defended. Across four studies, I built and validated SolidWorks Simulation models, compared element and boundary-condition choices, and used the verified results to evaluate stiffness, stress, weight, cost, and stability.
+    </p>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">01</span>
+        <div>
+          <h2>Model validation and convergence</h2>
+          <p class="fea-section-kicker">Simply supported aluminum beam</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          I began with a simply supported beam under uniform pressure. Analytical beam equations predicted a maximum bending stress of 54 kpsi and a maximum deflection of 15.3 in. I modeled the same beam with solid, shell, and beam elements while changing the fixtures and mesh size.
+        </p>
+        <p>
+          Fully fixing the end faces made the model artificially stiff. Replacing those fixtures with edge constraints allowed the ends to rotate like pin and roller supports. With the corrected boundary conditions, mesh refinement brought the solid-element result to 54.02 kpsi and 15.32 in - closely matching the analytical solution.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>54.0 kpsi</strong>
+          <span>Analytical maximum stress</span>
+        </div>
+        <div class="fea-stat">
+          <strong>54.02 kpsi</strong>
+          <span>Refined solid-element result</span>
+        </div>
+        <div class="fea-stat">
+          <strong>15.32 in</strong>
+          <span>Refined simulated deflection</span>
+        </div>
+      </div>
+
+      <div class="fea-figure-grid">
+        <figure class="fea-figure">
+          <img src="../images/FEA/solid-element-contour.png" alt="Solid-element stress contour for the simply supported beam">
+          <figcaption>Solid elements captured the full 3D geometry but required refinement to converge.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/FEA/beam-element-contour.png" alt="Beam-element stress contour for the simply supported beam">
+          <figcaption>Beam elements reproduced the bending solution with a much simpler model.</figcaption>
+        </figure>
+        <figure class="fea-figure fea-figure--wide">
+          <img src="../images/FEA/solid-mesh-convergence.png" alt="Plot of stress and deflection convergence as solid-element size decreases">
+          <figcaption>Reducing the solid-element size moved both stress and deflection toward the analytical values.</figcaption>
+        </figure>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Key lesson:</strong> A visually convincing contour is not proof of a correct model. Fixtures, element selection, mesh convergence, and an independent analytical estimate all matter.
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">02</span>
+        <div>
+          <h2>Wing-spar optimization</h2>
+          <p class="fea-section-kicker">Geometry, material, weight, and cost trade study</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          I evaluated a conceptual 70 ft cantilever wing spar under a triangular lift distribution and a 500 lbf engine point load. I compared I-beam and hollow box sections in 7075-T6 aluminum and normalized AISI 4130 steel, iterating each geometry until tip deflection fell within the 9-10 in target range.
+        </p>
+      </div>
+
+      <figure class="fea-figure" style="margin-top: 26px;">
+        <img src="../images/FEA/wing-spar-loading.png" alt="Cantilever wing spar with triangular lift distribution and engine point load">
+        <figcaption>Final load case: triangular distributed lift with a 500 lbf engine load located one-third of the span from the root.</figcaption>
+      </figure>
+
+      <div class="fea-table-wrap">
+        <table class="fea-table">
+          <thead>
+            <tr>
+              <th>Cross section</th>
+              <th>Material</th>
+              <th>Deflection</th>
+              <th>Max stress</th>
+              <th>Weight</th>
+              <th>Est. cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>I-beam</td>
+              <td>7075-T6 Al</td>
+              <td>9.780 in</td>
+              <td>4,760 psi</td>
+              <td>1,969 lb</td>
+              <td>$13,783</td>
+            </tr>
+            <tr>
+              <td>I-beam</td>
+              <td>AISI 4130 steel</td>
+              <td>9.544 in</td>
+              <td>13,325 psi</td>
+              <td>2,596 lb</td>
+              <td>$25,960</td>
+            </tr>
+            <tr class="is-recommended">
+              <td>Box beam</td>
+              <td>7075-T6 Al</td>
+              <td>9.378 in</td>
+              <td>3,259 psi</td>
+              <td>1,705 lb</td>
+              <td>$11,935</td>
+            </tr>
+            <tr>
+              <td>Box beam</td>
+              <td>AISI 4130 steel</td>
+              <td>9.300 in</td>
+              <td>6,694 psi</td>
+              <td>3,335 lb</td>
+              <td>$33,350</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Recommendation:</strong> The 7075-T6 aluminum box beam was the lightest and least expensive option while meeting the displacement target. Its simulated stress also remained well below the assumed yield strength.
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">03</span>
+        <div>
+          <h2>Stress concentrations</h2>
+          <p class="fea-section-kicker">Fillet-radius sensitivity under axial and bending loads</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          A stepped bar showed how geometric discontinuities amplify local stress. The highest von Mises stress formed at the fillet where the cross section changed. I swept the fillet radius from 0.2 to 16 in and compared the response under axial and bending loads.
+        </p>
+        <p>
+          Increasing the radius reduced peak stress from 19.85 to 12.80 kpsi for the reported axial cases and from 29.56 to 20.24 kpsi for bending. Both curves approached a plateau, revealing diminishing structural benefit as the fillet became larger.
+        </p>
+      </div>
+
+      <div class="fea-stat-grid">
+        <div class="fea-stat">
+          <strong>35.5%</strong>
+          <span>Reduction in reported axial peak stress</span>
+        </div>
+        <div class="fea-stat">
+          <strong>31.5%</strong>
+          <span>Reduction in reported bending peak stress</span>
+        </div>
+        <div class="fea-stat">
+          <strong>0.2-16 in</strong>
+          <span>Fillet-radius range evaluated</span>
+        </div>
+      </div>
+
+      <div class="fea-callout">
+        <strong>Design implication:</strong> A larger fillet can reduce local stress, but the benefit eventually levels off. The final radius should balance strength with packaging and manufacturing constraints.
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">04</span>
+        <div>
+          <h2>Buckling and support conditions</h2>
+          <p class="fea-section-kicker">Safety-factor-driven column sizing</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          I used Euler buckling theory to establish initial dimensions for 6.5 ft balsa-wood columns, then refined each model with a SolidWorks eigenvalue buckling study. Four cases combined pinned-pinned and fixed-pinned supports with 22,500 and 45,000 lbf compressive loads.
+        </p>
+        <p>
+          Every configuration was iterated into the required 2.5-2.6 safety-factor range. The fixed-pinned cases required smaller cross sections because the rotational restraint increased column stiffness. Doubling the load increased the required side length by roughly one inch because the square section's area moment of inertia scales with the fourth power of its side length.
+        </p>
+      </div>
+
+      <div class="fea-table-wrap">
+        <table class="fea-table">
+          <thead>
+            <tr>
+              <th>Boundary condition</th>
+              <th>Applied load</th>
+              <th>Final side length</th>
+              <th>Safety factor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Pinned-pinned</td><td>22,500 lbf</td><td>5.67 in</td><td>2.50</td></tr>
+            <tr><td>Fixed-pinned</td><td>22,500 lbf</td><td>4.75 in</td><td>2.51</td></tr>
+            <tr><td>Pinned-pinned</td><td>45,000 lbf</td><td>6.75 in</td><td>2.52</td></tr>
+            <tr><td>Fixed-pinned</td><td>45,000 lbf</td><td>5.70 in</td><td>2.52</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fea-figure-grid">
+        <figure class="fea-figure">
+          <img src="../images/FEA/buckling-pinned-pinned.png" alt="Pinned-pinned column buckling mode shape">
+          <figcaption>Pinned-pinned mode shape with maximum lateral displacement near midspan. Deformation is exaggerated for visibility.</figcaption>
+        </figure>
+        <figure class="fea-figure">
+          <img src="../images/FEA/buckling-fixed-pinned.png" alt="Fixed-pinned column buckling mode shape">
+          <figcaption>Fixed-pinned mode shape showing the effect of added rotational restraint. Deformation is exaggerated for visibility.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">05</span>
+        <div>
+          <h2>What I learned</h2>
+          <p class="fea-section-kicker">Engineering judgment before solver output</p>
+        </div>
+      </div>
+
+      <div class="fea-copy">
+        <p>
+          These studies reinforced that FEA is not a substitute for engineering judgment. A solver will return a result even when fixtures, element types, or mesh choices do not represent the physical problem. By pairing simulation with analytical estimates, convergence checks, and design iteration, I learned to separate visually plausible output from a result that can be defended and used for a design decision.
+        </p>
+      </div>
+
+      <div class="fea-reports" aria-label="Technical reports">
+        <a class="fea-report-link" href="FEA%20Sources/FEA%20Lab%2001%20-%20Validation%20and%20Mesh%20Convergence.pdf" target="_blank" rel="noopener">Lab 1 report: Validation &rarr;</a>
+        <a class="fea-report-link" href="FEA%20Sources/FEA%20Lab%2002%20-%20Wing%20Spar%20Optimization.pdf" target="_blank" rel="noopener">Lab 2 report: Wing spar &rarr;</a>
+        <a class="fea-report-link" href="FEA%20Sources/FEA%20Lab%2003%20-%20Stress%20Concentrations.pdf" target="_blank" rel="noopener">Lab 3 report: Stress concentrations &rarr;</a>
+        <a class="fea-report-link" href="FEA%20Sources/FEA%20Lab%2004%20-%20Buckling.pdf" target="_blank" rel="noopener">Lab 4 report: Buckling &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Apolonio Ordaz. Built with HTML, CSS, and JS.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
