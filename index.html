@@ -3,217 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apolonio Ordaz — Portfolio</title>
-
-  <!-- style.css controls everything visual: colors, spacing, fonts -->
+  <meta name="description" content="Mechanical engineering portfolio of Apolonio Ordaz — Cal Poly SLO student focused on design, analysis, rapid prototyping, and manufacturing.">
+  <meta name="theme-color" content="#f4ecdf">
+  <title>Apolonio Ordaz | Mechanical Engineering</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f4ecdf'/%3E%3Cpath d='M7 24 14 8h4l7 16h-4l-1.5-4h-7L11 24H7zm7-8h4l-2-5-2 5z' fill='%232f2a26'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="portfolio-home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- ============ NAV BAR ============ -->
-  <!-- A <header> holding a <nav> is the standard, semantic way to build a top bar -->
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="Projects/timeline.html">Timeline</a>
+  <header class="site-header home-header">
+    <nav class="navbar home-nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Apolonio Ordaz, home">
+        <span class="brand-mark" aria-hidden="true">AO</span>
+        <span class="brand-copy">Apolonio Ordaz<small>Mechanical engineering</small></span>
+      </a>
+      <div class="nav-links home-nav-links">
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Capabilities</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="nav-title">Apolonio Ordaz</div>
-      <div class="nav-socials">
-        <a href="Resume/Apolonio Ordaz Resume.pdf" target="_blank">Resume</a>
-        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      <div class="nav-actions">
+        <a class="nav-timeline" href="Projects/timeline.html">
+          Timeline <span aria-hidden="true">→</span>
+        </a>
+        <a class="nav-resume" href="resume-update.html">
+          Resume <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </nav>
   </header>
 
-  <!-- ============ HERO SECTION ============ -->
-  <!-- id="home" lets the nav link "Home" jump straight here -->
-  <section id="home" class="hero">
-    <div class="hero-photo">
-      <div class="hero-carousel" aria-label="Photo gallery">
-        <button class="carousel-button carousel-button--prev" type="button" aria-label="Previous photo">&#10094;</button>
-        <img
-          src="images/Me pics/Hiking Image 1.JPG"
-          alt="Apolonio hiking outdoors"
-          class="carousel-image active"
-        >
-        <img
-          src="images/Me pics/Hiking Image 2.jpg"
-          alt="Apolonio hiking outdoors"
-          class="carousel-image"
-        >
-        <img
-          src="images/Me pics/AO Headshot 1.jpg"
-          alt="Apolonio headshot"
-          class="carousel-image"
-        >
-        <img
-          src="images/Me pics/Glasse HEadshot.JPG"
-          alt="Apolonio wearing glasses headshot"
-          class="carousel-image"
-        >
-        <button class="carousel-button carousel-button--next" type="button" aria-label="Next photo">&#10095;</button>
-      </div>
-    </div>
-
-    <div class="hero-text">
-      <h1>I'm Apolonio Ordaz,<br>a Mechanical Engineering Student.</h1>
-      <p>
-        I'm a mechanical engineering student at Cal Poly San Luis Obispo, working on the
-        Baja SAE Racing Team's rear suspension subteam. I recently completed a machine shop
-        internship at Vandenberg Space Force Base, and I work as an engineering and math tutor.
-      </p>
-      <p>
-        Scroll down to see the projects I've built and worked on.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" class="btn">LinkedIn</a>
-        <a href="#projects" class="btn">Projects</a>
-        <a href="Resume/Apolonio Ordaz Resume.pdf" target="_blank" class="btn">Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS SECTION ============ -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-        <div class="project-card-inner project-card-inner--image-left">
-          <div class="project-card-image project-card-image--fea">
-            <img src="images/FEA/stress-concentration-hero.png" alt="Finite element stress contour around a fillet">
-          </div>
-          <div class="project-card-content">
-            <h3>Finite Element Analysis Studies</h3>
-            <p>Validated SolidWorks models against hand calculations, studied mesh convergence and boundary conditions, and applied FEA to structural optimization, stress concentrations, and buckling.</p>
-            <a href="Projects/fea-analysis.html">View project &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-inner project-card-inner--image-left">
-          <div class="project-card-image project-card-image--ncas">
-            <img src="images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode simulated Mars mission poster">
-          </div>
-          <div class="project-card-content">
-            <h3>NASA NCAS Mission Experience</h3>
-            <p>Progressed from researching Orion and NASA mission systems to leading a multidisciplinary simulated Mars mission as project manager.</p>
-            <a href="Projects/ncas.html">View project &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" hidden>
-        <div class="project-card-inner project-card-inner--image-left">
-          <div class="project-card-image project-card-image--vandenberg">
-            <span>Internship</span>
-          </div>
-          <div class="project-card-content">
-            <h3>Vandenberg Space Force Base Internship</h3>
-            <p>Placeholder description. Machine shop internship, CSWA cert, DFM work, etc.</p>
-            <a href="Projects/VandenBerg.html" target="_blank">View project &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-inner project-card-inner--image-left">
-          <div class="project-card-image project-card-image--scooter">
-            <img src="images/Scooter Project/knee-scooter-outdoor-hero.jpg" alt="Completed white PVC knee scooter outdoors">
-          </div>
-          <div class="project-card-content">
-            <h3>PVC Knee Scooter</h3>
-            <p>Low-cost knee scooter design built for mobility support with a PVC frame and stability-focused geometry.</p>
-            <a href="Projects/knee-scooter.html">View project &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-inner project-card-inner--image-left">
-          <div class="project-card-image project-card-image--placeholder">
-            <img src="images/Bottle Carrier/Fulll Prototype.jpg" alt="Bottle carrier prototype image">
-          </div>
-          <div class="project-card-content">
-            <h3>Ergonomic Bottle Carrier and Inverter Prototype</h3>
-            <p>Designed and built a mobile carrying device to safely transport and invert 5-gallon water bottles, going through the full engineering design process from user interviews to a working prototype.</p>
-            <a href="Projects/Project%203.html">View project &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-inner project-card-inner--image-left">
-          <div class="project-card-image project-card-image--bottling">
-            <video autoplay muted loop playsinline preload="metadata" poster="images/Bottleing%20Station/bottling%20station%20drawing.png" aria-label="Bottling station SolidWorks motion study preview">
-              <source src="images/Bottleing%20Station/Bottling%20Station.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="project-card-content">
-            <h3>Bottling Station</h3>
-            <p>SolidWorks assembly and motion analysis project focused on an automated bottling system with indexed motion and mechanical interaction analysis.</p>
-            <a href="Projects/Bottling%20Station.html">View project &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============ ABOUT / TIMELINE SECTION ============ -->
-  <section class="about-section" id="about">
-    <div class="about-plaque">
-      <p class="about-kicker">About Me</p>
-      <h2>My story</h2>
-
-      <div class="about-content">
-        <p>
-          I’m Apolonio Ordaz, a mechanical engineering student at Cal Poly San Luis Obispo.
-          My path has included hands-on work in construction, leadership in coaching, tutoring,
-          and engineering projects that connect problem-solving with real-world fabrication.
+  <main id="main-content">
+    <section id="home" class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span>ME // 2027</span> Cal Poly San Luis Obispo</p>
+        <h1 id="hero-title">I design the part.<br><em>Then I make it real.</em></h1>
+        <p class="hero-lede">
+          Mechanical engineering student working where CAD, analysis, and hands-on manufacturing meet—from Baja SAE suspension hardware to rapid prototypes for Vandenberg Space Force Base.
         </p>
-
-        <div class="timeline-summary">
-          <div class="timeline-row">
-            <span>2026</span>
-            <p>Vandenberg internship in rapid prototyping and manufacturing</p>
-          </div>
-          <div class="timeline-row">
-            <span>2025</span>
-            <p>Cal Poly Mechanical Engineering student and Baja SAE member</p>
-          </div>
-          <div class="timeline-row">
-            <span>2024</span>
-            <p>Engineering / math tutor and campus leadership</p>
-          </div>
-          <div class="timeline-row">
-            <span>2023</span>
-            <p>Independent contractor and shift leader roles</p>
-          </div>
-          <div class="timeline-row">
-            <span>2022</span>
-            <p>General Builder Supplies — Store Associate</p>
-          </div>
-        </div>
-
-        <div class="about-actions">
-          <a href="Projects/timeline.html" class="btn">View full timeline</a>
+        <div class="hero-actions">
+          <a class="action action--primary" href="#projects">Explore selected work <span aria-hidden="true">↓</span></a>
+          <a class="action action--quiet" href="resume-update.html">Resume &amp; contact <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <p>&copy; 2026 Apolonio Ordaz. Built with HTML, CSS, and JS.</p>
+      <aside class="hero-spec" aria-label="Profile summary">
+        <div class="profile-card">
+          <div class="profile-frame">
+            <img class="no-lightbox" src="images/Me pics/Hiking Image 1.JPG" alt="Apolonio Ordaz hiking outdoors" width="1514" height="1527" fetchpriority="high" decoding="async">
+          </div>
+
+          <div class="profile-card__content">
+            <div class="profile-card__top">
+              <span class="profile-card__label">Profile</span>
+              <span class="profile-card__status"><span class="profile-card__dot"></span>Looking for work</span>
+            </div>
+
+            <div class="profile-card__line">
+              <span class="profile-card__number">01</span>
+              <span>California Polytechnic State University</span>
+            </div>
+
+            <h2 class="profile-card__degree">B.S. Mechanical Engineering</h2>
+            <p class="profile-card__summary">Expected June 2027 · San Luis Obispo, CA</p>
+
+            <div class="profile-card__meta">
+              <div>
+                <span class="profile-card__label">Looking for</span>
+                <p>Mechanical design, manufacturing, R&amp;D</p>
+              </div>
+              <div>
+                <span class="profile-card__label">Based in</span>
+                <p>San Luis Obispo, California</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="hero-index" aria-hidden="true">
+        <span>DESIGN</span><span>VALIDATE</span><span>FABRICATE</span>
+      </div>
+    </section>
+
+    <section id="projects" class="home-section selected-work" aria-labelledby="projects-title">
+      <header class="section-heading">
+        <div>
+          <p class="section-code">01 / SELECTED WORK</p>
+          <h2 id="projects-title">Engineering in context.</h2>
+        </div>
+        <p>Projects are shown as case studies: the constraint, the engineering work, and what the result taught me.</p>
+      </header>
+
+      <div class="featured-grid" aria-label="Selected engineering projects">
+        <article class="work-card showcase-card">
+          <a class="work-media showcase-media" href="Projects/fea-analysis.html" aria-label="View the finite element analysis case study"><img src="images/FEA/stress-concentration-hero.png" alt="SolidWorks stress contour showing a concentration around a fillet" width="867" height="385" loading="lazy" decoding="async"><span class="project-plate">Project—01</span></a>
+          <div class="work-copy"><div class="work-meta"><span>FEA · Validation</span><span>01 / 07</span></div><h3>Finite Element Analysis Studies</h3><p>Validated simulation models against hand calculations, mesh convergence, and corrected boundary conditions.</p><a class="text-link" href="Projects/fea-analysis.html">Read case study <span aria-hidden="true">→</span></a></div>
+        </article>
+
+        <article class="work-card showcase-card">
+          <a class="work-media showcase-media" href="Projects/knee-scooter.html" aria-label="View the PVC knee scooter project"><img src="images/Scooter Project/knee-scooter-outdoor-angle.jpg" alt="Completed PVC knee scooter viewed outdoors from an angle" width="1152" height="864" loading="lazy" decoding="async"><span class="project-plate">Project—02</span></a>
+          <div class="work-copy"><div class="work-meta"><span>Design · Analysis · Build</span><span>02 / 07</span></div><h3>PVC Knee Scooter</h3><p>Moved from user needs and CAD through structural analysis, fabrication, and load testing.</p><a class="text-link" href="Projects/knee-scooter.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+
+        <article class="work-card showcase-card">
+          <a class="work-media showcase-media showcase-media--portrait" href="Projects/Project%203.html" aria-label="View the ergonomic bottle carrier project"><img src="images/Bottle Carrier/Fulll Prototype.jpg" alt="Built mobile bottle carrier and inverter prototype" width="600" height="800" loading="lazy" decoding="async"><span class="project-plate">Project—03</span></a>
+          <div class="work-copy"><div class="work-meta"><span>Product design · Prototype</span><span>03 / 07</span></div><h3>Ergonomic Bottle Carrier</h3><p>Designed and tested a wheeled system for transporting and inverting a five-gallon water bottle.</p><a class="text-link" href="Projects/Project%203.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+
+        <article class="work-card showcase-card">
+          <a class="work-media showcase-media" href="Projects/ncas.html" aria-label="View the Ares Abode NASA NCAS mission project"><img src="images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode simulated Mars mission concept" width="1080" height="720" loading="lazy" decoding="async"><span class="project-plate">Project—04</span></a>
+          <div class="work-copy"><div class="work-meta"><span>Systems · Leadership</span><span>04 / 07</span></div><h3>Ares Abode</h3><p>Led a multidisciplinary team through planning and execution of a simulated Mars mission.</p><a class="text-link" href="Projects/ncas.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+
+        <article class="work-card showcase-card">
+          <a class="work-media showcase-media" href="Projects/Bottling%20Station.html" aria-label="View the automated bottling station project"><img src="images/Bottleing Station/bottling station drawing.png" alt="SolidWorks drawing of an automated bottling station" width="1920" height="1080" loading="lazy" decoding="async"><span class="project-plate">Project—06</span></a>
+          <div class="work-copy"><div class="work-meta"><span>CAD · Motion study</span><span>06 / 07</span></div><h3>Automated Bottling Station</h3><p>Developed the CAD assembly and motion study for a coordinated automated filling process.</p><a class="text-link" href="Projects/Bottling%20Station.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="home-section experience-section" aria-labelledby="experience-title">
+      <header class="section-heading section-heading--compact">
+        <div>
+          <p class="section-code">02 / EXPERIENCE</p>
+          <h2 id="experience-title">Built from the shop floor up.</h2>
+        </div>
+        <a class="text-link" href="Projects/timeline.html">Full timeline <span aria-hidden="true">→</span></a>
+      </header>
+
+      <ol class="experience-list">
+        <li>
+          <time datetime="2026-06">2026</time>
+          <div><h3>Rapid Prototyping &amp; Manufacturing Engineering Intern</h3><p>Vandenberg Space Force Base</p></div>
+          <span>Engineering</span>
+        </li>
+        <li>
+          <time datetime="2025">2025—Now</time>
+          <div><h3>Rear Suspension Team Member</h3><p>Cal Poly Racing · Baja SAE</p></div>
+          <span>Engineering</span>
+        </li>
+        <li>
+          <time datetime="2024-01">2024—Now</time>
+          <div><h3>Engineering, Math &amp; Physics Tutor</h3><p>Fresno City College Tutorial Center</p></div>
+          <span>Teaching</span>
+        </li>
+        <li>
+          <time datetime="2023-09">2023—2025</time>
+          <div><h3>Assistant Wrestling Coach</h3><p>Madera Unified School District</p></div>
+          <span>Leadership</span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="home-section capabilities-section" aria-labelledby="skills-title">
+      <div class="capabilities-intro">
+        <p class="section-code">03 / CAPABILITIES</p>
+        <h2 id="skills-title">Tools are only useful when they produce better decisions.</h2>
+        <p>My workflow moves from problem definition to CAD, analysis, drawings, and physical validation.</p>
+      </div>
+      <div class="capability-grid">
+        <article><span>01</span><h3>Design</h3><p>SolidWorks · Fusion 360 · assemblies · engineering drawings · GD&amp;T</p></article>
+        <article><span>02</span><h3>Analysis</h3><p>SolidWorks Simulation · FEA validation · EES · mechanics · design tradeoffs</p></article>
+        <article><span>03</span><h3>Manufacturing</h3><p>Manual mill · lathe · prototyping · fabrication · design for manufacturing</p></article>
+        <article><span>04</span><h3>Communication</h3><p>Technical documentation · tutoring · team leadership · design reviews</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="home-section contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="section-code">04 / CONTACT</p>
+        <h2 id="contact-title">Let’s build something that has to work.</h2>
+        <div class="contact-profile">
+          <img src="images/california-polytechnic-state-university-logo-png_seeklogo-341814.png" alt="Cal Poly university seal" width="600" height="600" loading="lazy" decoding="async">
+          <div class="contact-profile__details">
+            <strong>Apolonio Ordaz</strong>
+            <span>Cal Poly San Luis Obispo</span>
+            <span>B.S. Mechanical Engineering · Dec 2027</span>
+            <a href="mailto:apolonioordaz5@gmail.com">apolonioordaz5@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-actions">
+        <a class="action action--primary" href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+        <a class="action action--quiet" href="resume-update.html">Request resume <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer home-footer">
+    <p class="home-footer-meta">© 2026 Apolonio Ordaz · Engineering portfolio</p>
   </footer>
 
-  <!-- script.js runs after the page loads -->
   <script src="script.js"></script>
 </body>
 </html>

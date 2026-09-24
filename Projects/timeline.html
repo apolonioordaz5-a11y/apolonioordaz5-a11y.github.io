@@ -8,22 +8,9 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar" aria-label="Primary navigation">
-      <div class="nav-links">
-        <a href="../index.html#home">Home</a>
-        <a href="../index.html#projects">Projects</a>
-        <a href="timeline.html" class="active" aria-current="page">Timeline</a>
-        <a href="../Resume/Apolonio%20Ordaz%20Resume.pdf" target="_blank" rel="noopener">Resume</a>
-      </div>
-      <div class="nav-title">Apolonio Ordaz</div>
-      <div class="nav-socials">
-        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </nav>
-  </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <main class="timeline-page">
+  <main id="main-content" class="timeline-page">
     <a href="../index.html" class="back-link">&larr; Back home</a>
 
     <div class="timeline-intro">
@@ -34,23 +21,23 @@
       </p>
     </div>
 
-    <div class="timeline-filters" aria-label="Filter timeline by role">
-      <button class="timeline-filter is-active" type="button" data-filter="all" aria-pressed="true">
+    <form class="timeline-filters" aria-label="Filter timeline by role" novalidate>
+      <button class="timeline-filter is-active" type="submit" data-filter="all" aria-pressed="true">
         <span class="filter-dot filter-dot--all"></span>All <span class="filter-count">11</span>
       </button>
-      <button class="timeline-filter" type="button" data-filter="education" aria-pressed="false">
+      <button class="timeline-filter" type="submit" data-filter="education" aria-pressed="false">
         <span class="filter-dot filter-dot--education"></span>Education <span class="filter-count">3</span>
       </button>
-      <button class="timeline-filter" type="button" data-filter="engineering" aria-pressed="false">
+      <button class="timeline-filter" type="submit" data-filter="engineering" aria-pressed="false">
         <span class="filter-dot filter-dot--engineering"></span>Engineering <span class="filter-count">3</span>
       </button>
-      <button class="timeline-filter" type="button" data-filter="leadership" aria-pressed="false">
+      <button class="timeline-filter" type="submit" data-filter="leadership" aria-pressed="false">
         <span class="filter-dot filter-dot--leadership"></span>Leadership <span class="filter-count">2</span>
       </button>
-      <button class="timeline-filter" type="button" data-filter="work" aria-pressed="false">
+      <button class="timeline-filter" type="submit" data-filter="work" aria-pressed="false">
         <span class="filter-dot filter-dot--work"></span>Work <span class="filter-count">3</span>
       </button>
-    </div>
+    </form>
 
     <ol class="career-timeline" aria-label="Career and education timeline">
       <span class="timeline-rail" aria-hidden="true"></span>
@@ -194,10 +181,11 @@
           <h2>Joined Cal Poly Racing</h2>
           <p class="timeline-role"><strong>Rear Suspension Team Member</strong> | Baja SAE</p>
           <p>Manufacture rear-suspension components on the manual mill and lathe, working from engineering drawings and GD&amp;T to hold critical dimensions.</p>
+          <a class="timeline-project-link" href="VandenBerg.html">View Baja case study &rarr;</a>
         </article>
       </li>
 
-      <li class="timeline-item" data-category="engineering">
+      <li class="timeline-item" id="vandenberg" data-category="engineering">
         <span class="timeline-index">11</span>
         <span class="timeline-marker" aria-hidden="true"></span>
         <article class="timeline-content">
@@ -208,6 +196,7 @@
           <h2>Engineered hardware at Vandenberg</h2>
           <p class="timeline-role"><strong>Rapid Prototyping &amp; Manufacturing Engineering Intern</strong> | Vandenberg Space Force Base</p>
           <p>Designed and fabricated training aids and prototypes, translating documented requirements into functional hardware in a professional machine-shop environment.</p>
+          <a class="timeline-project-link" href="vandenberg-internship.html">View internship case study &rarr;</a>
         </article>
       </li>
     </ol>

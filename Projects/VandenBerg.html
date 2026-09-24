@@ -3,87 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baja SAE — Rear Suspension | Joe Ordaz</title>
-
-  <!-- This file lives in /projects, so it has to step UP one level ( ../ )
-       to reach style.css, which sits in the main portfolio folder. -->
+  <meta name="description" content="Baja SAE rear suspension manufacturing work by mechanical engineering student Apolonio Ordaz.">
+  <title>Baja SAE Rear Suspension | Apolonio Ordaz</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
       <div class="nav-links">
-        <!-- ../index.html steps up one level, then into index.html -->
         <a href="../index.html">Home</a>
-        <a href="../index.html#projects">All Projects</a>
-        <a href="../Resume/Apolonio Ordaz Resume.pdf" target="_blank">Resume</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="timeline.html">Timeline</a>
       </div>
-      <div class="nav-title">Joe Ordaz</div>
+      <div class="nav-title">Apolonio Ordaz</div>
       <div class="nav-socials">
-        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        <a href="../resume-update.html">Resume</a>
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </nav>
   </header>
 
-  <main class="project-page">
+  <main id="main-content" class="project-page fea-page baja-page">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <h1>Baja SAE — Rear Suspension</h1>
-    <p class="project-subtitle">Cal Poly SLO Baja Racing Team — Rear Suspension Subteam</p>
+    <p class="project-code">Baja SAE / Manufacturing</p>
+    <h1>Rear Suspension Manufacturing</h1>
+    <p class="project-subtitle">Cal Poly Racing | Rear Suspension Team | 2025&ndash;Present</p>
 
-    <!-- Main image. Once you have a photo, update the src path.
-         Since this page is inside /projects, the path reaches back
-         out to /images with ../images/... -->
-    <div class="project-hero-image">
-      <div class="photo-placeholder">Add a main project photo</div>
-      <!-- <img src="../images/baja-suspension/final-part.jpg" alt="Rear suspension assembly"> -->
+    <div class="fea-tags" aria-label="Project skills">
+      <span class="fea-tag">Manual Mill</span>
+      <span class="fea-tag">Manual Lathe</span>
+      <span class="fea-tag">Engineering Drawings</span>
+      <span class="fea-tag">GD&amp;T</span>
+      <span class="fea-tag">Inspection</span>
     </div>
 
-    <section class="project-section">
-      <h2>Overview</h2>
-      <p>Placeholder — describe the project goal in 2-3 sentences. What problem was the team solving?</p>
-    </section>
+    <div class="baja-technical-hero" role="img" aria-label="Abstract technical line drawing of a double-wishbone rear suspension">
+      <svg viewBox="0 0 620 360" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="480" cy="180" r="92"></circle>
+          <circle cx="480" cy="180" r="42"></circle>
+          <path d="M120 94 L435 146 L456 174 L432 192 L118 272"></path>
+          <path d="M136 124 L436 161 M136 242 L433 190"></path>
+          <path d="M120 72 V294 M95 94 H145 M95 272 H145"></path>
+          <path d="M480 62 V298 M360 180 H600" stroke-dasharray="8 8"></path>
+        </g>
+        <g fill="currentColor">
+          <circle cx="120" cy="94" r="6"></circle>
+          <circle cx="118" cy="272" r="6"></circle>
+          <circle cx="438" cy="154" r="6"></circle>
+          <circle cx="434" cy="190" r="6"></circle>
+        </g>
+      </svg>
+      <span class="schematic-label">Suspension architecture / representative diagram</span>
+    </div>
 
-    <section class="project-section">
-      <h2>My Role</h2>
-      <p>Placeholder — what specifically did you design, analyze, or build?</p>
-    </section>
+    <p class="fea-intro">As a member of Cal Poly Racing&rsquo;s Baja SAE rear suspension team, I manufacture components on manual mills and lathes from engineering drawings. The work demands careful setup, dimensional control, and communication between the design intent and the finished hardware.</p>
 
-    <section class="project-section">
-      <h2>Design Process</h2>
-      <p>Placeholder — CAD iterations, constraints, tradeoffs, testing.</p>
-    </section>
-
-    <!-- Image gallery grid. Copy/paste one .gallery-item div per extra photo. -->
-    <section class="project-section">
-      <h2>Gallery</h2>
-      <div class="project-gallery">
-        <div class="gallery-item">
-          <div class="photo-placeholder">Photo 1</div>
-          <!-- <img src="../images/baja-suspension/cad-model.jpg" alt="CAD model"> -->
-        </div>
-        <div class="gallery-item">
-          <div class="photo-placeholder">Photo 2</div>
-          <!-- <img src="../images/baja-suspension/testing.jpg" alt="Testing rig"> -->
-        </div>
-        <div class="gallery-item">
-          <div class="photo-placeholder">Photo 3</div>
-        </div>
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">01</span>
+        <div><h2>Team responsibility</h2><p class="fea-section-kicker">Turn released drawings into reliable hardware</p></div>
+      </div>
+      <div class="fea-copy">
+        <p>My role sits at the point where suspension geometry becomes a physical part. I interpret drawing views, dimensions, tolerances, and GD&amp;T before planning a machining sequence that preserves critical references.</p>
+        <p>Each setup has to support the next operation, provide usable inspection surfaces, and produce a component that fits the larger assembly.</p>
       </div>
     </section>
 
-    <section class="project-section">
-      <h2>Results</h2>
-      <p>Placeholder — what was the outcome? Numbers/metrics if you have them.</p>
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">02</span>
+        <div><h2>Manufacturing workflow</h2><p class="fea-section-kicker">Plan, machine, inspect, communicate</p></div>
+      </div>
+      <div class="fea-stat-grid vandenberg-process-grid">
+        <article class="fea-stat"><strong>Plan</strong><span>Read the drawing and identify critical datums, dimensions, and setups</span></article>
+        <article class="fea-stat"><strong>Machine</strong><span>Use manual mill and lathe operations to create the specified geometry</span></article>
+        <article class="fea-stat"><strong>Inspect</strong><span>Check critical features and resolve discrepancies with the team</span></article>
+      </div>
     </section>
 
+    <section class="fea-section">
+      <div class="fea-section-heading">
+        <span class="fea-section-number">03</span>
+        <div><h2>Engineering judgment</h2><p class="fea-section-kicker">Manufacturability is part of the design loop</p></div>
+      </div>
+      <div class="fea-copy">
+        <p>Hands-on fabrication makes drawing clarity, tool access, datum selection, and operation order tangible. A feature can be valid in CAD but still create unnecessary setup risk or inspection difficulty in the shop.</p>
+        <p>Working with the rear suspension team has strengthened my ability to give manufacturing feedback early and to treat the drawing, process, and part as one connected engineering system.</p>
+      </div>
+      <div class="fea-callout"><strong>Portfolio note:</strong> This case study focuses on my manufacturing process and responsibility without inventing dimensions or performance results that are not documented in the project material.</div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Joe Ordaz. Built with HTML, CSS, and JS.</p>
-  </footer>
-
+  <footer class="site-footer"><p>&copy; 2026 Apolonio Ordaz. Mechanical engineering portfolio.</p></footer>
   <script src="../script.js"></script>
 </body>
 </html>
