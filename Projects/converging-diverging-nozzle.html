@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experimental study of choking, pressure ratio, and Mach number through a converging-diverging nozzle.">
+  <title>Choked Flow Through a Converging-Diverging Nozzle - Apolonio Ordaz</title><link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="navbar" aria-label="Primary navigation"><div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#projects">All Projects</a><a href="timeline.html">Timeline</a></div><div class="nav-title">Apolonio Ordaz</div><div class="nav-socials"><a href="../resume-update.html">Resume</a><a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a></div></nav></header>
+  <main id="main-content" class="project-page fea-page nozzle-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+    <p class="project-code">Compressible flow / Nozzle testing</p><h1>Choked flow through a converging-diverging nozzle</h1>
+    <p class="project-subtitle">Pressure ratios, Mach number, and the onset of sonic flow | ME 347 | Cal Poly San Luis Obispo</p>
+    <div class="fea-tags" aria-label="Project skills"><span class="fea-tag">Compressible Flow</span><span class="fea-tag">Choked Flow</span><span class="fea-tag">Pressure Measurement</span><span class="fea-tag">Mach Number</span><span class="fea-tag">Model Validation</span></div>
+    <figure class="fea-hero nozzle-hero"><img class="no-lightbox" src="../images/Compressible Nozzle/nozzle-schematic.png" alt="Converging-diverging nozzle schematic with pressure taps at the inlet, throat, and outlet"><figcaption>Pressure taps at the inlet, throat, and outlet tracked the nozzle as the compressor drew increasing mass flow.</figcaption></figure>
+    <p class="fea-intro">Worked with a team of four on this lab, and I tested a converging-diverging nozzle across a series of compressor settings. We used pressure ratios to identify choking, calculated throat Mach number, and compared incompressible and compressible one-dimensional models.</p>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Instrument the nozzle</h2><p class="fea-section-kicker">Three pressure stations across a controlled restriction</p></div></div>
+      <div class="fea-copy"><p>A four-stage centrifugal compressor pulled air through the nozzle. Pressure transducers measured vacuum pressure at the inlet, throat, and outlet while atmospheric pressure and temperature established the absolute reference and air properties.</p><p>The measured throat diameter was 9.481 mm, smaller than the nominal 10 mm. Retaining both dimensions in the analysis helped separate geometry sensitivity from model behavior.</p></div>
+      <figure class="flow-chart nozzle-apparatus"><img src="../images/Compressible Nozzle/compressible-flow-apparatus.png" alt="Centrifugal compressor connected to the transparent converging-diverging nozzle and pressure instrumentation"><figcaption>Compressor, nozzle, and pressure-transducer test stand.</figcaption></figure>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">02</span><div><h2>Pressure ratio falls</h2><p class="fea-section-kicker">The throat records the largest static-pressure drop</p></div></div>
+      <div class="fea-copy"><p>Increasing compressor speed raised mass flow and accelerated the air through the converging section. The inlet remained near atmospheric pressure while the throat pressure ratio fell sharply toward the critical value.</p><p>The experimental trend followed the compressible model more closely as velocity increased. Density variation became important enough that the constant-density model could no longer represent the flow accurately.</p></div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Compressible Nozzle/pressure-ratio.png" alt="Measured throat pressure ratio falling toward the choked-flow limit as mass flow increases"><figcaption>Throat pressure ratio versus experimental mass flow. The steep final cluster marks the approach to choking.</figcaption></figure>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">03</span><div><h2>Locate the choking point</h2><p class="fea-section-kicker">Mass flow levels off as the throat approaches Mach 1</p></div></div>
+      <div class="fea-copy"><p>Choking appeared near a mass flow of 0.0170 kg/s. The corresponding measured throat pressure ratio was approximately 0.537, close to the theoretical critical ratio of 0.528 for air with k = 1.4.</p><p>An audible change in the flow and the leveling of mass flow provided independent experimental evidence that the throat had reached sonic conditions.</p></div>
+      <div class="fea-stat-grid"><div class="fea-stat"><strong>0.0170 kg/s</strong><span>Observed choked mass flow</span></div><div class="fea-stat"><strong>0.537</strong><span>Measured pressure ratio near choking</span></div><div class="fea-stat"><strong>0.528</strong><span>Theoretical critical pressure ratio</span></div></div>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">04</span><div><h2>Compressibility matters</h2><p class="fea-section-kicker">Model divergence grows with Mach number</p></div></div>
+      <div class="fea-copy"><p>The incompressible and compressible predictions began separating by roughly 3-5% near Mach 0.44. At higher speeds, density changes could no longer be neglected.</p><p>The measured-diameter compressible model tracked the experimental data best and approached Mach 1 at the same flow rate identified from the pressure-ratio plot.</p></div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Compressible Nozzle/mach-number.png" alt="Experimental throat Mach number rising toward one with mass flow, compared with incompressible and compressible models"><figcaption>Throat Mach number versus mass flow. The compressible model captures the rapid rise toward sonic conditions.</figcaption></figure>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">05</span><div><h2>Resolve the apparent supersonic result</h2><p class="fea-section-kicker">A measurement-location issue explained an impossible throat value</p></div></div>
+      <div class="fea-copy"><p>At the highest compressor settings, the measured pressure ratio dropped below 0.528 and the direct calculation returned Mach numbers slightly above one. That result cannot describe the true minimum-area throat, where choked flow should remain at Mach 1.</p><p>The most likely explanation is that the labeled throat pressure tap sits slightly downstream in the diverging section. There, the flow can continue accelerating and static pressure can fall below the true throat value.</p></div>
+      <div class="fea-callout"><strong>Engineering takeaway:</strong> the anomaly did not invalidate the experiment. Combining physical constraints with two independent plots turned it into evidence about the sensor's actual location.</div>
+    </section>
+  </main><script src="../script.js"></script>
+</body></html>

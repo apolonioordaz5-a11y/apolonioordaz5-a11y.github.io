@@ -15,6 +15,38 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   });
 });
 
+document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+  link.addEventListener('click', function (event) {
+    var mailtoLink = link.getAttribute('href');
+
+    if (!mailtoLink) {
+      return;
+    }
+
+    event.preventDefault();
+
+    try {
+      var tempLink = document.createElement('a');
+      tempLink.href = mailtoLink;
+      tempLink.style.display = 'none';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+    } catch (error) {
+      // no-op; browser may block external protocol handlers on local files
+    }
+
+    setTimeout(function () {
+      var emailAddress = mailtoLink.replace(/^mailto:/i, '').split('?')[0];
+      var copyMessage = 'No email app was detected. Copy this address manually:\n\n' + emailAddress;
+
+      if (window.prompt) {
+        window.prompt(copyMessage, emailAddress);
+      }
+    }, 200);
+  });
+});
+
 var lightbox = document.querySelector('.image-lightbox');
 if (!lightbox) {
   lightbox = document.createElement('div');

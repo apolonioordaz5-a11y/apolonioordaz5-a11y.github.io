@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wind-tunnel study of pressure distribution, wake velocity, and drag for flow over a circular cylinder.">
+  <title>Cylinder in Uniform Flow - Apolonio Ordaz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">All Projects</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+      <div class="nav-title">Apolonio Ordaz</div>
+      <div class="nav-socials">
+        <a href="../resume-update.html">Resume</a>
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="project-page fea-page cylinder-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+    <p class="project-code">Experimental fluid mechanics / Wind tunnel</p>
+    <h1>Cylinder in a uniform flow</h1>
+    <p class="project-subtitle">Pressure distribution, wake velocity, and drag estimation | ME 347 | Cal Poly San Luis Obispo</p>
+
+    <div class="fea-tags" aria-label="Project skills">
+      <span class="fea-tag">Wind Tunnel Testing</span>
+      <span class="fea-tag">Pressure Measurement</span>
+      <span class="fea-tag">Wake Survey</span>
+      <span class="fea-tag">Numerical Integration</span>
+      <span class="fea-tag">Experimental Validation</span>
+    </div>
+
+    <figure class="flow-hero" aria-labelledby="flow-hero-caption">
+      <svg viewBox="0 0 1000 520" role="img" aria-labelledby="flow-title flow-desc">
+        <title id="flow-title">Flow over a pressure-tapped circular cylinder</title>
+        <desc id="flow-desc">Parallel streamlines approach a circular cylinder, split around it, and form an expanding wake downstream. Pressure tap locations are shown around the cylinder.</desc>
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="currentColor"/></marker>
+        </defs>
+        <g class="flow-lines" fill="none" marker-end="url(#arrow)">
+          <path d="M52 92H948"/><path d="M52 150C270 150 328 150 406 195C430 209 444 224 454 237"/>
+          <path d="M52 205C300 205 348 208 429 246"/><path d="M52 260H396"/>
+          <path d="M52 315C300 315 348 312 429 274"/><path d="M52 370C270 370 328 370 406 325C430 311 444 296 454 283"/>
+          <path d="M52 428H948"/>
+        </g>
+        <circle class="flow-cylinder" cx="500" cy="260" r="104"/>
+        <g class="pressure-taps"><circle cx="396" cy="260" r="6"/><circle cx="410" cy="208" r="6"/><circle cx="448" cy="174" r="6"/><circle cx="500" cy="156" r="6"/><circle cx="552" cy="174" r="6"/><circle cx="590" cy="208" r="6"/><circle cx="604" cy="260" r="6"/><circle cx="590" cy="312" r="6"/><circle cx="552" cy="346" r="6"/><circle cx="500" cy="364" r="6"/></g>
+        <path class="wake-shape" d="M600 218C708 170 832 174 948 202V318C832 346 708 350 600 302C624 282 624 238 600 218Z"/>
+        <path class="wake-center" d="M618 260H948" marker-end="url(#arrow)"/>
+        <g class="flow-labels">
+          <text x="52" y="65">U∞ = 13.75 m/s</text><text x="458" y="266">D = 1.50 in</text><text x="726" y="247">VELOCITY DEFICIT</text><text x="726" y="272">+ TURBULENT WAKE</text>
+        </g>
+      </svg>
+      <figcaption id="flow-hero-caption">Test article and measurement logic — pressure taps map the surface load; a traversing Pitot-static probe maps the downstream wake.</figcaption>
+    </figure>
+
+    <p class="fea-intro">Worked with a team of four on this lab, and I measured how air moves around a brass cylinder and compared two independent drag estimates. The pressure result matched published behavior; the wake result did not, making measurement quality as important as the final number.</p>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Test setup and method</h2><p class="fea-section-kicker">One cylinder, two ways to measure drag</p></div></div>
+      <div class="fea-copy">
+        <p>A 1.50 in brass cylinder was mounted perpendicular to the flow in the Cal Poly mechanical engineering wind tunnel. After locating the stagnation point, the team recorded surface pressure in 10-degree increments from 0 to 180 degrees.</p>
+        <p>A Pitot-static probe on an x-y traverse then sampled the wake at 17.5 in and 25.0 in downstream. Ambient conditions and free-stream dynamic pressure established air density, velocity, and a cylinder Reynolds number of 3.49 × 10<sup>4</sup>.</p>
+      </div>
+      <div class="fea-stat-grid">
+        <div class="fea-stat"><strong>1.50 in</strong><span>Brass cylinder diameter</span></div>
+        <div class="fea-stat"><strong>13.75 m/s</strong><span>Calculated free-stream velocity</span></div>
+        <div class="fea-stat"><strong>3.49 × 10<sup>4</sup></strong><span>Diameter-based Reynolds number</span></div>
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">02</span><div><h2>Surface pressure</h2><p class="fea-section-kicker">The expected signature of separation</p></div></div>
+      <div class="fea-copy">
+        <p>The stagnation point produced the largest pressure coefficient, C<sub>p</sub> = 1.03. Pressure fell as the flow accelerated around the cylinder, reached C<sub>p</sub> = -1.54 near 70 degrees, and remained negative across the rear surface—a broad low-pressure region consistent with separated flow.</p>
+      </div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Fluid Mechanics/pressure-coefficient.svg" alt="Line chart of pressure coefficient versus cylinder angle, falling from 1.03 at zero degrees to a minimum of negative 1.54 near seventy degrees"><figcaption>Nineteen surface measurements captured the high-pressure stagnation point, acceleration around the side, and separated rear region.</figcaption></figure>
+      <div class="fea-callout"><strong>Interpretation:</strong> the nearly flat, negative pressure on the back side indicates that the boundary layer separated and left a wide turbulent wake rather than recovering to the ideal-flow pressure distribution.</div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">03</span><div><h2>Wake development</h2><p class="fea-section-kicker">Velocity deficit and downstream recovery</p></div></div>
+      <div class="fea-copy">
+        <p>Both wake surveys showed their lowest normalized velocity near the cylinder centerline and recovery toward free-stream velocity away from the wake. The profile farther downstream appeared broader and smoother, which is consistent with turbulent mixing.</p>
+      </div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Fluid Mechanics/wake-profile.svg" alt="Two normalized velocity profiles showing a central wake deficit at seventeen and a half and twenty-five inches downstream"><figcaption>Normalized velocity u/U plotted against normalized vertical position y/D for both traverse locations.</figcaption></figure>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">04</span><div><h2>Drag comparison</h2><p class="fea-section-kicker">A good result and a useful discrepancy</p></div></div>
+      <div class="fea-copy">
+        <p>Numerically integrating the surface pressure distribution gave C<sub>D</sub> = 1.256, close to the expected value of approximately 1.2. Integrating the wake momentum deficit produced much lower values, so those results were treated as evidence of an incomplete or inconsistent wake survey—not as validated drag coefficients.</p>
+      </div>
+      <div class="fea-table-wrap">
+        <table class="fea-table">
+          <thead><tr><th>Method</th><th>Location / source</th><th>Drag coefficient, C<sub>D</sub></th><th>Assessment</th></tr></thead>
+          <tbody>
+            <tr class="is-recommended"><td>Surface pressure</td><td>Cylinder surface</td><td>1.256</td><td>Agrees with reference</td></tr>
+            <tr><td>Wake momentum</td><td>x = 17.5 in</td><td>0.179</td><td>Underestimated</td></tr>
+            <tr><td>Wake momentum</td><td>x = 25.0 in</td><td>0.031</td><td>Underestimated</td></tr>
+            <tr><td>Reference behavior</td><td>Re<sub>D</sub> = 3.49 × 10<sup>4</sup></td><td>≈ 1.2</td><td>Expected range</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fea-callout"><strong>Likely error sources:</strong> unsteady vortex shedding, probe misalignment, pressure-zero drift, an incomplete vertical integration range, and free-stream inconsistency. Several measured u/U values above 1 outside the wake support that diagnosis.</div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">05</span><div><h2>Engineering takeaway</h2><p class="fea-section-kicker">Validate the method, not only the arithmetic</p></div></div>
+      <div class="fea-copy">
+        <p>The experiment connected surface pressure, separation, wake formation, and pressure drag in one test. More importantly, comparing independent methods exposed a measurement problem that a single calculation would have hidden.</p>
+        <p>A stronger repeat test would re-zero the transducer before each traverse, verify probe alignment, extend the survey beyond the full velocity deficit, and repeat multiple passes to quantify the unsteadiness of the wake.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

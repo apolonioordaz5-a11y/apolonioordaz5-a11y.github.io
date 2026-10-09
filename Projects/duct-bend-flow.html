@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experimental study of pressure distribution and energy loss through a rectangular duct with a 90-degree bend.">
+  <title>Flow Through a 90-Degree Duct Bend - Apolonio Ordaz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">All Projects</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+      <div class="nav-title">Apolonio Ordaz</div>
+      <div class="nav-socials">
+        <a href="../resume-update.html">Resume</a>
+        <a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="project-page fea-page duct-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+    <p class="project-code">Internal flow / Pressure measurement</p>
+    <h1>Flow through a 90-degree duct bend</h1>
+    <p class="project-subtitle">Pressure distribution, model comparison, and bend losses | ME 347 | Cal Poly San Luis Obispo</p>
+
+    <div class="fea-tags" aria-label="Project skills">
+      <span class="fea-tag">Internal Flow</span>
+      <span class="fea-tag">Manometer Testing</span>
+      <span class="fea-tag">Pressure Taps</span>
+      <span class="fea-tag">Loss Coefficients</span>
+      <span class="fea-tag">Model Validation</span>
+    </div>
+
+    <figure class="fea-hero duct-hero">
+      <img src="../images/Duct Flow/duct-apparatus.png" alt="Airflow box feeding a rectangular duct with pressure taps around a 90-degree bend">
+      <figcaption>Airflow bench and instrumented bend. Thirty taps measured pressure along the inner wall, outer wall, and radial direction.</figcaption>
+    </figure>
+
+    <p class="fea-intro">Worked with a team of four on this lab, and I measured how a 90-degree turn redistributes pressure across a rectangular duct. We compared the experiment with one- and two-dimensional ideal-flow models and quantified the additional loss caused by the bend.</p>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Apparatus and reduction</h2><p class="fea-section-kicker">Thirty pressure taps across one curved flow path</p></div></div>
+      <div class="fea-copy">
+        <p>An airflow box supplied steady flow through a contraction and into the rectangular bend. An inclined water manometer recorded differential pressure at ten inner-wall taps, ten outer-wall taps, and ten taps across the bend radius.</p>
+        <p>Ambient pressure and temperature established air density. The airbox-to-inlet pressure difference gave an average duct velocity of 34.16 m/s. A separate estimate from the inner-to-outer pressure difference and the free-vortex model gave 32.17 m/s.</p>
+      </div>
+      <div class="fea-stat-grid">
+        <div class="fea-stat"><strong>34.16 m/s</strong><span>Velocity from the inlet contraction</span></div>
+        <div class="fea-stat"><strong>32.17 m/s</strong><span>Velocity from the free-vortex estimate</span></div>
+        <div class="fea-stat"><strong>30 taps</strong><span>Inner, outer, and radial measurements</span></div>
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">02</span><div><h2>Pressure through the bend</h2><p class="fea-section-kicker">Curvature creates the pressure gradient that turns the flow</p></div></div>
+      <div class="fea-copy">
+        <p>Pressure separated sharply between the two walls near the middle of the bend. At tap 5, the inner wall reached -611.90 Pa while the outer wall reached 350.01 Pa. The profiles returned toward similar values near the outlet.</p>
+        <p>The higher pressure at the outer wall supplies the radial pressure gradient required for centripetal acceleration. The inner and outer curves therefore form opposite peaks around the center of the turn.</p>
+      </div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Duct Flow/wall-pressure.png" alt="Gauge pressure along the duct bend, with inner-wall pressure falling below negative 600 pascals and outer-wall pressure rising above 300 pascals near the middle"><figcaption>Measured gauge pressure along both walls. Tap 5 lies near the middle of the 90-degree bend.</figcaption></figure>
+      <div class="fea-table-wrap">
+        <table class="fea-table">
+          <thead><tr><th>Tap</th><th>Inner wall</th><th>Outer wall</th><th>Pressure separation</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>53.85 Pa</td><td>85.67 Pa</td><td>31.82 Pa</td></tr>
+            <tr><td>3</td><td>-210.49 Pa</td><td>198.26 Pa</td><td>408.75 Pa</td></tr>
+            <tr class="is-recommended"><td>5</td><td>-611.90 Pa</td><td>350.01 Pa</td><td>961.91 Pa</td></tr>
+            <tr><td>7</td><td>-308.40 Pa</td><td>188.46 Pa</td><td>496.86 Pa</td></tr>
+            <tr><td>10</td><td>-24.48 Pa</td><td>-2.45 Pa</td><td>22.03 Pa</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">03</span><div><h2>Angular model comparison</h2><p class="fea-section-kicker">The two-dimensional model captured the shape</p></div></div>
+      <div class="fea-copy">
+        <p>The normalized inner-wall pressure difference rose through the bend, peaked near its midpoint, and fell toward the outlet. The experiment followed the two-dimensional inviscid model closely in shape.</p>
+        <p>The measured values deviated where the ideal model could not represent viscosity, wall shear, losses, secondary flow, or local separation.</p>
+      </div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Duct Flow/inner-wall-model.png" alt="Experimental and two-dimensional model values for normalized pressure difference along the inner wall of the bend"><figcaption>Experimental points follow the model’s rise and fall through the bend, with smaller departures near the inlet and outlet.</figcaption></figure>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">04</span><div><h2>Radial pressure gradient</h2><p class="fea-section-kicker">Pressure increased from the inner radius to the outer radius</p></div></div>
+      <div class="fea-copy">
+        <p>The radial taps showed a monotonic pressure increase toward the outer wall. That trend matched the free-vortex model and the expected balance between pressure force and centripetal acceleration.</p>
+        <p>The one-dimensional model consistently overpredicted the normalized pressure difference. The idealized model captured the direction and curvature of the result but omitted the losses and three-dimensional flow structures present in the apparatus.</p>
+      </div>
+      <figure class="flow-chart"><img class="no-lightbox" src="../images/Duct Flow/radial-pressure-model.png" alt="Experimental normalized radial pressure data increasing from the inner radius to the outer radius below the one-dimensional model prediction"><figcaption>The measured radial pressure rise stayed below the ideal one-dimensional prediction across the bend.</figcaption></figure>
+    </section>
+
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">05</span><div><h2>Bend loss and takeaway</h2><p class="fea-section-kicker">Turning the flow cost more pressure than wall friction alone</p></div></div>
+      <div class="fea-copy">
+        <p>The measured bend-loss coefficient was K = 0.112, corresponding to a 78.33 Pa pressure drop. The lab-manual chart gave K ≈ 0.12 and 83.41 Pa, a close independent check.</p>
+        <p>An equivalent length of straight commercial-steel duct produced an estimated 25.75 Pa drop. The bend loss was about three times larger because the turn introduced secondary flow, greater turbulence, and possible separation in addition to ordinary wall friction.</p>
+      </div>
+      <div class="fea-stat-grid">
+        <div class="fea-stat"><strong>K = 0.112</strong><span>Experimentally calculated loss coefficient</span></div>
+        <div class="fea-stat"><strong>78.33 Pa</strong><span>Calculated pressure loss through the bend</span></div>
+        <div class="fea-stat"><strong>25.75 Pa</strong><span>Estimated loss for equivalent straight duct</span></div>
+      </div>
+      <div class="fea-callout"><strong>Engineering takeaway:</strong> both ideal models explained the dominant pressure pattern, but their residual error contained useful information about real losses and secondary flow.</div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

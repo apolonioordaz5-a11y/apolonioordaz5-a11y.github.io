@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wind-tunnel study of boundary-layer growth, velocity profiles, and drag over a flat plate.">
+  <title>Boundary Layer Growth Over a Flat Plate - Apolonio Ordaz</title><link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="navbar" aria-label="Primary navigation"><div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#projects">All Projects</a><a href="timeline.html">Timeline</a></div><div class="nav-title">Apolonio Ordaz</div><div class="nav-socials"><a href="../resume-update.html">Resume</a><a href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn</a></div></nav></header>
+  <main id="main-content" class="project-page fea-page boundary-page">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+    <p class="project-code">External flow / Boundary-layer measurement</p><h1>Boundary layer growth over a flat plate</h1>
+    <p class="project-subtitle">Pitot-static velocity profiles, integral thicknesses, and drag estimation | ME 347 | Cal Poly San Luis Obispo</p>
+    <div class="fea-tags" aria-label="Project skills"><span class="fea-tag">Wind Tunnel</span><span class="fea-tag">Pitot-Static Traverse</span><span class="fea-tag">Boundary Layers</span><span class="fea-tag">Numerical Integration</span><span class="fea-tag">Drag Estimation</span></div>
+    <figure class="fea-hero boundary-hero"><img src="../images/Boundary Layer/wind-tunnel-apparatus.png" alt="Low-speed wind tunnel with a flat plate, Pitot-static traverse, and inclined manometer"><figcaption>The traverse positioned a Pitot-static probe at precise heights above the plate at two downstream stations.</figcaption></figure>
+    <p class="fea-intro">Worked with a team of four on this lab, and I measured the velocity field developing over a flat plate. The profiles let us track boundary-layer growth, calculate displacement and momentum thickness, and compare the resulting drag estimate with laminar and turbulent theory.</p>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Traverse the velocity profile</h2><p class="fea-section-kicker">Two stations, one developing boundary layer</p></div></div>
+      <div class="fea-copy"><p>A Pitot-static tube moved outward from the plate in small increments at x = 11.5 cm and x = 21.5 cm. Manometer deflection was converted to dynamic pressure and local velocity, with the plateau defining the free stream.</p><p>The free-stream speed was approximately 20.03 m/s. Boundary-layer thickness was identified where the local velocity reached 99% of that value.</p></div>
+      <div class="fea-stat-grid"><div class="fea-stat"><strong>20.03 m/s</strong><span>Measured free-stream velocity</span></div><div class="fea-stat"><strong>11.5 cm</strong><span>First station from the leading edge</span></div><div class="fea-stat"><strong>21.5 cm</strong><span>Second station from the leading edge</span></div></div>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">02</span><div><h2>Growth downstream</h2><p class="fea-section-kicker">Viscous effects spread farther from the wall</p></div></div>
+      <div class="fea-copy"><p>The measured boundary layer grew from 2.775 mm to 4.48 mm between the two stations. Displacement thickness increased from 0.435 mm to 0.582 mm, while momentum thickness increased from 0.194 mm to 0.330 mm.</p><p>Those changes are consistent with a developing boundary layer: progressively more fluid is slowed by the wall, increasing both the effective displacement of the outer flow and its momentum deficit.</p></div>
+      <div class="fea-table-wrap"><table class="fea-table"><thead><tr><th>Station</th><th>Reynolds number</th><th>Boundary layer</th><th>Displacement</th><th>Momentum</th></tr></thead><tbody><tr><td>11.5 cm</td><td>1.50 &times; 10<sup>5</sup></td><td>2.775 mm</td><td>0.435 mm</td><td>0.194 mm</td></tr><tr class="is-recommended"><td>21.5 cm</td><td>2.80 &times; 10<sup>5</sup></td><td>4.480 mm</td><td>0.582 mm</td><td>0.330 mm</td></tr></tbody></table></div>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">03</span><div><h2>Profile against theory</h2><p class="fea-section-kicker">Measurements fell between ideal laminar and turbulent behavior</p></div></div>
+      <div class="fea-copy"><p>At both stations, the experimental profile rose more rapidly than the Blasius laminar solution and followed the turbulent power-law curve more closely through much of the layer. It did not match either ideal model exactly.</p></div>
+      <div class="fea-figure-grid"><figure><img class="no-lightbox" src="../images/Boundary Layer/profile-11-5cm.png" alt="Normalized velocity profile at 11.5 centimeters compared with laminar and turbulent theory"><figcaption>Profile at x = 11.5 cm.</figcaption></figure><figure><img class="no-lightbox" src="../images/Boundary Layer/profile-21-5cm.png" alt="Normalized velocity profile at 21.5 centimeters compared with laminar and turbulent theory"><figcaption>Profile at x = 21.5 cm.</figcaption></figure></div>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">04</span><div><h2>Drag from momentum thickness</h2><p class="fea-section-kicker">A velocity profile becomes a force estimate</p></div></div>
+      <div class="fea-copy"><p>Numerical integration of each profile produced momentum thickness, which was then used to estimate plate drag. The calculated drag force increased downstream from 0.00463 N to 0.00788 N as the momentum deficit accumulated.</p><p>The drag coefficient remained close to the laminar prediction even though the profile shape appeared more turbulent, reinforcing that the layer was in transition rather than fully developed in either regime.</p></div>
+      <div class="fea-stat-grid"><div class="fea-stat"><strong>0.00463 N</strong><span>Drag estimate at 11.5 cm</span></div><div class="fea-stat"><strong>0.00788 N</strong><span>Drag estimate at 21.5 cm</span></div><div class="fea-stat"><strong>C<sub>D</sub> = 0.00307</strong><span>Measured coefficient at 21.5 cm</span></div></div>
+    </section>
+    <section class="fea-section">
+      <div class="fea-section-heading"><span class="fea-section-number">05</span><div><h2>Takeaway</h2><p class="fea-section-kicker">Model disagreement identified the flow regime</p></div></div>
+      <div class="fea-copy"><p>The experimental thickness stayed between the laminar and turbulent predictions, while the velocity shape leaned turbulent and the drag metrics leaned laminar. Together, those results point to a transitional boundary layer. The largest uncertainty came from resolving velocity very near the wall, compounded by wind-tunnel interruptions during the traverse.</p></div>
+      <div class="fea-callout"><strong>Engineering takeaway:</strong> no single metric defined the regime. Comparing profile shape, integral thicknesses, Reynolds number, and drag produced a more defensible conclusion than any one result alone.</div>
+    </section>
+  </main><script src="../script.js"></script>
+</body></html>

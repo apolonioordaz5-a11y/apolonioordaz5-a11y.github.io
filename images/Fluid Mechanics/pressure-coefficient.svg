@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-labelledby="title desc">
+  <title id="title">Pressure coefficient around the cylinder</title>
+  <desc id="desc">The pressure coefficient falls from 1.03 at zero degrees to negative 1.54 near seventy degrees, then remains near negative 1.3 toward the rear of the cylinder.</desc>
+  <rect width="800" height="460" fill="#f8f3ea"/>
+  <g stroke="#d9c6a9" stroke-width="1">
+    <path d="M86 60H750M86 130H750M86 200H750M86 270H750M86 340H750"/>
+    <path d="M86 60V340M252 60V340M418 60V340M584 60V340M750 60V340"/>
+  </g>
+  <g fill="#5f5148" font-family="Consolas, monospace" font-size="13">
+    <text x="54" y="65">1.0</text><text x="54" y="135">0.0</text><text x="45" y="205">-1.0</text><text x="45" y="275">-2.0</text>
+    <text x="82" y="366">0°</text><text x="242" y="366">45°</text><text x="408" y="366">90°</text><text x="566" y="366">135°</text><text x="734" y="366">180°</text>
+    <text x="355" y="412">CYLINDER ANGLE, θ</text>
+    <text transform="translate(22 262) rotate(-90)">PRESSURE COEFFICIENT, Cₚ</text>
+  </g>
+  <polyline fill="none" stroke="#2f2a26" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="86,58 123,68 160,90 197,126 234,164 271,202 308,229 345,240 382,224 418,219 455,218 492,219 529,221 566,225 603,229 640,229 677,232 713,232 750,235"/>
+  <g fill="#d3b48a" stroke="#2f2a26" stroke-width="2">
+    <circle cx="86" cy="58" r="5"/><circle cx="160" cy="90" r="5"/><circle cx="234" cy="164" r="5"/><circle cx="308" cy="229" r="5"/><circle cx="345" cy="240" r="5"/><circle cx="418" cy="219" r="5"/><circle cx="529" cy="221" r="5"/><circle cx="640" cy="229" r="5"/><circle cx="750" cy="235" r="5"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <text x="86" y="30" fill="#2f2a26" font-size="20" font-weight="700">Surface pressure distribution</text>
+    <text x="106" y="50" fill="#5f5148" font-size="13">Cₚ = 1.03 · stagnation point</text>
+    <path d="M343 250v38" stroke="#b88f5d" stroke-width="2"/>
+    <text x="290" y="310" fill="#5f5148" font-size="13">Minimum Cₚ = -1.54 near 70°</text>
+  </g>
+</svg>
