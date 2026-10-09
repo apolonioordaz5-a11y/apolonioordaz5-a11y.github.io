@@ -4,226 +4,408 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mechanical engineering portfolio of Apolonio Ordaz — Cal Poly SLO student focused on design, analysis, rapid prototyping, and manufacturing.">
-  <meta name="theme-color" content="#f4ecdf">
+  <meta name="theme-color" content="#000000">
   <title>Apolonio Ordaz | Mechanical Engineering</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f4ecdf'/%3E%3Cpath d='M7 24 14 8h4l7 16h-4l-1.5-4h-7L11 24H7zm7-8h4l-2-5-2 5z' fill='%232f2a26'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M7 24 14 8h4l7 16h-4l-1.5-4h-7L11 24H7zm7-8h4l-2-5-2 5z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="portfolio-home">
+<body id="top" class="portfolio-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header home-header">
-    <nav class="navbar home-nav" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="Apolonio Ordaz, home">
+  <header class="masthead" data-masthead>
+    <div class="masthead__inner">
+      <a class="masthead__brand" href="index.html" aria-label="Apolonio Ordaz, home">
         <span class="brand-mark" aria-hidden="true">AO</span>
-        <span class="brand-copy">Apolonio Ordaz<small>Mechanical engineering</small></span>
+        <span>Apolonio Ordaz</span>
       </a>
-      <div class="nav-links home-nav-links">
-        <a href="#projects">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Capabilities</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-actions">
-        <a class="nav-timeline" href="Projects/timeline.html">
-          Timeline <span aria-hidden="true">→</span>
-        </a>
-        <a class="nav-resume" href="resume-update.html">
-          Resume <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </nav>
+      <nav class="masthead__nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item nav-item--has-menu">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-menu-work">
+              Work
+              <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="nav-menu" id="nav-menu-work">
+              <div class="nav-menu__group">
+                <p class="label">Design &amp; build</p>
+                <ul>
+                  <li><a href="Projects/knee-scooter.html">PVC Knee Scooter</a></li>
+                  <li><a href="Projects/Project%203.html">Ergonomic Bottle Carrier</a></li>
+                  <li><a href="Projects/Bottling%20Station.html">Automated Bottling Station</a></li>
+                  <li><a href="Projects/ncas.html">Ares Abode</a></li>
+                </ul>
+              </div>
+              <div class="nav-menu__group">
+                <p class="label">Analysis &amp; dynamics</p>
+                <ul>
+                  <li><a href="Projects/fea-analysis.html">Finite Element Analysis Studies</a></li>
+                  <li><a href="Projects/mass-moment-inertia.html">B-2 Mass Moment of Inertia</a></li>
+                </ul>
+              </div>
+              <div class="nav-menu__group">
+                <p class="label">Fluid mechanics</p>
+                <ul>
+                  <li><a href="Projects/cylinder-flow.html">Cylinder in Uniform Flow</a></li>
+                  <li><a href="Projects/duct-bend-flow.html">Flow Through a 90-Degree Bend</a></li>
+                  <li><a href="Projects/boundary-layer-flow.html">Boundary Layer Over a Flat Plate</a></li>
+                  <li><a href="Projects/converging-diverging-nozzle.html">Converging-Diverging Nozzle</a></li>
+                </ul>
+              </div>
+              <p class="nav-menu__all"><a href="#projects">All selected work <span aria-hidden="true">→</span></a></p>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Capabilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="Projects/timeline.html">Timeline</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--sm masthead__cta" href="resume-update.html">Resume <span aria-hidden="true">↗</span></a>
+      <button class="masthead__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="masthead__toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
   </header>
 
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+    <div class="mobile-menu__top">
+      <a class="masthead__brand" href="index.html" aria-label="Apolonio Ordaz, home">
+        <span class="brand-mark" aria-hidden="true">AO</span>
+        <span>Apolonio Ordaz</span>
+      </a>
+      <button class="mobile-menu__close" type="button" aria-label="Close menu">×</button>
+    </div>
+    <nav class="mobile-menu__body" aria-label="Mobile navigation">
+      <ul class="mobile-menu__list">
+        <li>
+          <details>
+            <summary>Work</summary>
+            <div class="mobile-menu__sub">
+              <div>
+                <p class="label">Design &amp; build</p>
+                <ul>
+                  <li><a href="Projects/knee-scooter.html">PVC Knee Scooter</a></li>
+                  <li><a href="Projects/Project%203.html">Ergonomic Bottle Carrier</a></li>
+                  <li><a href="Projects/Bottling%20Station.html">Automated Bottling Station</a></li>
+                  <li><a href="Projects/ncas.html">Ares Abode</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="label">Analysis &amp; dynamics</p>
+                <ul>
+                  <li><a href="Projects/fea-analysis.html">Finite Element Analysis Studies</a></li>
+                  <li><a href="Projects/mass-moment-inertia.html">B-2 Mass Moment of Inertia</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="label">Fluid mechanics</p>
+                <ul>
+                  <li><a href="Projects/cylinder-flow.html">Cylinder in Uniform Flow</a></li>
+                  <li><a href="Projects/duct-bend-flow.html">Flow Through a 90-Degree Bend</a></li>
+                  <li><a href="Projects/boundary-layer-flow.html">Boundary Layer Over a Flat Plate</a></li>
+                  <li><a href="Projects/converging-diverging-nozzle.html">Converging-Diverging Nozzle</a></li>
+                </ul>
+              </div>
+              <a class="text-link" href="#projects">All selected work <span aria-hidden="true">→</span></a>
+            </div>
+          </details>
+        </li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Capabilities</a></li>
+        <li><a href="Projects/timeline.html">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu__actions">
+        <a class="btn" href="resume-update.html">Resume <span aria-hidden="true">↗</span></a>
+        <a class="btn btn--quiet" href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </div>
+
   <main id="main-content">
-    <section id="home" class="home-hero" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <p class="eyebrow"><span>ME // 2027</span> Cal Poly San Luis Obispo</p>
-        <h1 id="hero-title">I design the part.<br><em>Then I make it real.</em></h1>
-        <p class="hero-lede">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img class="no-lightbox" src="images/Me pics/Hiking Image 1.JPG" alt="Apolonio Ordaz hiking outdoors" width="1324" height="883" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow">ME // 2027 · Cal Poly San Luis Obispo</p>
+        <h1 id="hero-title">I design the part. <em>Then I make it real.</em></h1>
+        <p class="hero__lede">
           Mechanical engineering student working where CAD, analysis, and hands-on manufacturing meet—from Baja SAE suspension hardware to rapid prototypes for Vandenberg Space Force Base.
         </p>
-        <div class="hero-actions">
-          <a class="action action--primary" href="#projects">Explore selected work <span aria-hidden="true">↓</span></a>
-          <a class="action action--quiet" href="resume-update.html">Resume &amp; contact <span aria-hidden="true">↗</span></a>
+        <div class="hero__actions">
+          <a class="btn" href="#projects">Explore selected work <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--quiet" href="resume-update.html">Resume &amp; contact <span aria-hidden="true">↗</span></a>
         </div>
       </div>
+      <p class="hero__scroll label" aria-hidden="true">Design · Validate · Fabricate</p>
+    </section>
 
-      <aside class="hero-spec" aria-label="Profile summary">
-        <div class="profile-card">
-          <div class="profile-frame">
-            <img class="no-lightbox" src="images/Me pics/Hiking Image 1.JPG" alt="Apolonio Ordaz hiking outdoors" width="1514" height="1527" fetchpriority="high" decoding="async">
-          </div>
-
-          <div class="profile-card__content">
-            <div class="profile-card__top">
-              <span class="profile-card__label">Profile</span>
-              <span class="profile-card__status"><span class="profile-card__dot"></span>Looking for work</span>
-            </div>
-
-            <div class="profile-card__line">
-              <span class="profile-card__number">01</span>
-              <span>California Polytechnic State University</span>
-            </div>
-
-            <h2 class="profile-card__degree">B.S. Mechanical Engineering</h2>
-            <p class="profile-card__summary">Expected June 2027 · San Luis Obispo, CA</p>
-
-            <div class="profile-card__meta">
-              <div>
-                <span class="profile-card__label">Looking for</span>
-                <p>Mechanical design, manufacturing, R&amp;D</p>
-              </div>
-              <div>
-                <span class="profile-card__label">Based in</span>
-                <p>San Luis Obispo, California</p>
-              </div>
-            </div>
-          </div>
+    <section class="profile-strip" aria-label="Profile summary">
+      <div class="profile-strip__inner">
+        <div class="profile-strip__item">
+          <p class="label">Profile</p>
+          <p>California Polytechnic State University</p>
         </div>
-      </aside>
-
-      <div class="hero-index" aria-hidden="true">
-        <span>DESIGN</span><span>VALIDATE</span><span>FABRICATE</span>
+        <div class="profile-strip__item">
+          <p class="label">Degree</p>
+          <p>B.S. Mechanical Engineering<small>Expected December 2027 · San Luis Obispo, CA</small></p>
+        </div>
+        <div class="profile-strip__item">
+          <p class="label">Looking for</p>
+          <p><span class="status-dot" aria-hidden="true"></span>Looking for work<small>Mechanical design, manufacturing, R&amp;D</small></p>
+        </div>
+        <div class="profile-strip__item">
+          <p class="label">Based in</p>
+          <p>San Luis Obispo, California</p>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="home-section selected-work" aria-labelledby="projects-title">
-      <header class="section-heading">
+      <header class="section-head reveal">
         <div>
-          <p class="section-code">01 / SELECTED WORK</p>
+          <p class="section-code">01 / Selected work</p>
           <h2 id="projects-title">Engineering in context.</h2>
         </div>
         <p>Projects are shown as case studies: the constraint, the engineering work, and what the result taught me.</p>
       </header>
 
-      <div class="featured-grid" aria-label="Selected engineering projects">
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media" href="Projects/fea-analysis.html" aria-label="View the finite element analysis case study"><img src="images/FEA/stress-concentration-hero.png" alt="SolidWorks stress contour showing a concentration around a fillet" width="867" height="385" loading="lazy" decoding="async"><span class="project-plate">Project—01</span></a>
-          <div class="work-copy"><div class="work-meta"><span>FEA · Validation</span><span>01 / 10</span></div><h3>Finite Element Analysis Studies</h3><p>Validated simulation models against hand calculations, mesh convergence, and corrected boundary conditions.</p><a class="text-link" href="Projects/fea-analysis.html">Read case study <span aria-hidden="true">→</span></a></div>
+      <div class="feature-list" aria-label="Selected engineering projects">
+        <article class="feature reveal">
+          <a class="feature__media feature__media--contain" href="Projects/fea-analysis.html" aria-label="View the finite element analysis case study"><img src="images/FEA/stress-concentration-hero.png" alt="SolidWorks stress contour showing a concentration around a fillet" width="867" height="385" loading="lazy" decoding="async"><span class="feature__plate">Project—01</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">FEA · Validation</span><span class="label">01 / 10</span></div>
+            <h3>Finite Element Analysis Studies</h3>
+            <p>Validated simulation models against hand calculations, mesh convergence, and corrected boundary conditions.</p>
+            <a class="btn" href="Projects/fea-analysis.html">Read case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media" href="Projects/knee-scooter.html" aria-label="View the PVC knee scooter project"><img src="images/Scooter Project/knee-scooter-outdoor-angle.jpg" alt="Completed PVC knee scooter viewed outdoors from an angle" width="1152" height="864" loading="lazy" decoding="async"><span class="project-plate">Project—02</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Design · Analysis · Build</span><span>02 / 10</span></div><h3>PVC Knee Scooter</h3><p>Moved from user needs and CAD through structural analysis, fabrication, and load testing.</p><a class="text-link" href="Projects/knee-scooter.html">View project <span aria-hidden="true">→</span></a></div>
+        <article class="feature feature--reverse reveal">
+          <a class="feature__media" href="Projects/knee-scooter.html" aria-label="View the PVC knee scooter project"><img src="images/Scooter Project/knee-scooter-outdoor-angle.jpg" alt="Completed PVC knee scooter viewed outdoors from an angle" width="1152" height="864" loading="lazy" decoding="async"><span class="feature__plate">Project—02</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Design · Analysis · Build</span><span class="label">02 / 10</span></div>
+            <h3>PVC Knee Scooter</h3>
+            <p>Moved from user needs and CAD through structural analysis, fabrication, and load testing.</p>
+            <a class="btn" href="Projects/knee-scooter.html">View project <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media showcase-media--portrait" href="Projects/Project%203.html" aria-label="View the ergonomic bottle carrier project"><img src="images/Bottle Carrier/Fulll Prototype.jpg" alt="Built mobile bottle carrier and inverter prototype" width="600" height="800" loading="lazy" decoding="async"><span class="project-plate">Project—03</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Product design · Prototype</span><span>03 / 10</span></div><h3>Ergonomic Bottle Carrier</h3><p>Designed and tested a wheeled system for transporting and inverting a five-gallon water bottle.</p><a class="text-link" href="Projects/Project%203.html">View project <span aria-hidden="true">→</span></a></div>
+        <article class="feature reveal">
+          <a class="feature__media feature__media--contain" href="Projects/Project%203.html" aria-label="View the ergonomic bottle carrier project"><img src="images/Bottle Carrier/Fulll Prototype.jpg" alt="Built mobile bottle carrier and inverter prototype" width="600" height="800" loading="lazy" decoding="async"><span class="feature__plate">Project—03</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Product design · Prototype</span><span class="label">03 / 10</span></div>
+            <h3>Ergonomic Bottle Carrier</h3>
+            <p>Designed and tested a wheeled system for transporting and inverting a five-gallon water bottle.</p>
+            <a class="btn" href="Projects/Project%203.html">View project <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media" href="Projects/ncas.html" aria-label="View the Ares Abode NASA NCAS mission project"><img src="images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode simulated Mars mission concept" width="1080" height="720" loading="lazy" decoding="async"><span class="project-plate">Project—04</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Systems · Leadership</span><span>04 / 10</span></div><h3>Ares Abode</h3><p>Led a multidisciplinary team through planning and execution of a simulated Mars mission.</p><a class="text-link" href="Projects/ncas.html">View project <span aria-hidden="true">→</span></a></div>
+        <article class="feature feature--reverse reveal">
+          <a class="feature__media" href="Projects/ncas.html" aria-label="View the Ares Abode NASA NCAS mission project"><img src="images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode simulated Mars mission concept" width="1080" height="720" loading="lazy" decoding="async"><span class="feature__plate">Project—04</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Systems · Leadership</span><span class="label">04 / 10</span></div>
+            <h3>Ares Abode</h3>
+            <p>Led a multidisciplinary team through planning and execution of a simulated Mars mission.</p>
+            <a class="btn" href="Projects/ncas.html">View project <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media showcase-media--portrait" href="Projects/mass-moment-inertia.html" aria-label="View the B-2 mass moment of inertia experiment"><img src="images/Mass Moment Inertia/b2-pendulum-yaw.png" alt="B-2 Spirit model suspended for a physical pendulum test" width="402" height="725" loading="lazy" decoding="async"><span class="project-plate">Project—05</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Dynamics · Experiment</span><span>05 / 10</span></div><h3>B-2 Mass Moment of Inertia</h3><p>Validated two experimental methods on known geometry, then measured roll and yaw inertia for a B-2 model.</p><a class="text-link" href="Projects/mass-moment-inertia.html">Read case study <span aria-hidden="true">→</span></a></div>
+        <article class="feature reveal">
+          <a class="feature__media feature__media--contain" href="Projects/mass-moment-inertia.html" aria-label="View the B-2 mass moment of inertia experiment"><img src="images/Mass Moment Inertia/b2-pendulum-yaw.png" alt="B-2 Spirit model suspended for a physical pendulum test" width="402" height="725" loading="lazy" decoding="async"><span class="feature__plate">Project—05</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Dynamics · Experiment</span><span class="label">05 / 10</span></div>
+            <h3>B-2 Mass Moment of Inertia</h3>
+            <p>Validated two experimental methods on known geometry, then measured roll and yaw inertia for a B-2 model.</p>
+            <a class="btn" href="Projects/mass-moment-inertia.html">Read case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media" href="Projects/Bottling%20Station.html" aria-label="View the automated bottling station project"><img src="images/Bottleing Station/bottling station drawing.png" alt="SolidWorks drawing of an automated bottling station" width="1920" height="1080" loading="lazy" decoding="async"><span class="project-plate">Project—06</span></a>
-          <div class="work-copy"><div class="work-meta"><span>CAD · Motion study</span><span>06 / 10</span></div><h3>Automated Bottling Station</h3><p>Developed the CAD assembly and motion study for a coordinated automated filling process.</p><a class="text-link" href="Projects/Bottling%20Station.html">View project <span aria-hidden="true">→</span></a></div>
+        <article class="feature feature--reverse reveal">
+          <a class="feature__media feature__media--contain" href="Projects/Bottling%20Station.html" aria-label="View the automated bottling station project"><img src="images/Bottleing Station/bottling station drawing.png" alt="SolidWorks drawing of an automated bottling station" width="1920" height="1080" loading="lazy" decoding="async"><span class="feature__plate">Project—06</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">CAD · Motion study</span><span class="label">06 / 10</span></div>
+            <h3>Automated Bottling Station</h3>
+            <p>Developed the CAD assembly and motion study for a coordinated automated filling process.</p>
+            <a class="btn" href="Projects/Bottling%20Station.html">View project <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media flow-card-media" href="Projects/cylinder-flow.html" aria-label="View the cylinder in uniform flow wind-tunnel project">
+        <article class="feature reveal">
+          <a class="feature__media feature__media--diagram" href="Projects/cylinder-flow.html" aria-label="View the cylinder in uniform flow wind-tunnel project">
             <svg viewBox="0 0 720 405" role="img" aria-label="Airflow streamlines passing around a circular cylinder and expanding into a wake"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M35 66H685M35 113C222 113 262 126 313 175M35 160C230 160 276 165 324 190M35 203H306M35 246C230 246 276 241 324 216M35 293C222 293 262 280 313 231M35 340H685"/><circle cx="360" cy="203" r="72"/></g><path d="M423 166C505 135 598 140 685 161V245C598 266 505 271 423 240C443 219 443 187 423 166Z" fill="currentColor" opacity=".16"/><path d="M442 203H685" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="8 7"/></svg>
-            <span class="project-plate">Project—07</span>
+            <span class="feature__plate">Project—07</span>
           </a>
-          <div class="work-copy"><div class="work-meta"><span>Fluids · Experiment</span><span>07 / 10</span></div><h3>Cylinder in Uniform Flow</h3><p>Mapped surface pressure and wake velocity, then compared two independent estimates of cylinder drag.</p><a class="text-link" href="Projects/cylinder-flow.html">Read case study <span aria-hidden="true">→</span></a></div>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Fluids · Experiment</span><span class="label">07 / 10</span></div>
+            <h3>Cylinder in Uniform Flow</h3>
+            <p>Mapped surface pressure and wake velocity, then compared two independent estimates of cylinder drag.</p>
+            <a class="btn" href="Projects/cylinder-flow.html">Read case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media" href="Projects/duct-bend-flow.html" aria-label="View the rectangular duct bend flow experiment"><img src="images/Duct Flow/wall-pressure.png" alt="Measured inner- and outer-wall pressure profiles through a 90-degree duct bend" width="675" height="305" loading="lazy" decoding="async"><span class="project-plate">Project—08</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Fluids · Pressure</span><span>08 / 10</span></div><h3>Flow Through a 90-Degree Bend</h3><p>Measured the pressure gradient and energy loss through an instrumented rectangular duct bend.</p><a class="text-link" href="Projects/duct-bend-flow.html">Read case study <span aria-hidden="true">→</span></a></div>
+        <article class="feature feature--reverse reveal">
+          <a class="feature__media feature__media--contain" href="Projects/duct-bend-flow.html" aria-label="View the rectangular duct bend flow experiment"><img src="images/Duct Flow/wall-pressure.png" alt="Measured inner- and outer-wall pressure profiles through a 90-degree duct bend" width="675" height="305" loading="lazy" decoding="async"><span class="feature__plate">Project—08</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Fluids · Pressure</span><span class="label">08 / 10</span></div>
+            <h3>Flow Through a 90-Degree Bend</h3>
+            <p>Measured the pressure gradient and energy loss through an instrumented rectangular duct bend.</p>
+            <a class="btn" href="Projects/duct-bend-flow.html">Read case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media showcase-media--portrait" href="Projects/boundary-layer-flow.html" aria-label="View the flat-plate boundary-layer experiment"><img src="images/Boundary Layer/wind-tunnel-apparatus.png" alt="Low-speed wind tunnel used to measure a flat-plate boundary layer" width="415" height="580" loading="lazy" decoding="async"><span class="project-plate">Project—09</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Fluids · Wind tunnel</span><span>09 / 10</span></div><h3>Boundary Layer Over a Flat Plate</h3><p>Mapped two velocity profiles to track boundary-layer growth, transition, and momentum-based drag.</p><a class="text-link" href="Projects/boundary-layer-flow.html">Read case study <span aria-hidden="true">→</span></a></div>
+        <article class="feature reveal">
+          <a class="feature__media feature__media--contain" href="Projects/boundary-layer-flow.html" aria-label="View the flat-plate boundary-layer experiment"><img src="images/Boundary Layer/wind-tunnel-apparatus.png" alt="Low-speed wind tunnel used to measure a flat-plate boundary layer" width="415" height="580" loading="lazy" decoding="async"><span class="feature__plate">Project—09</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Fluids · Wind tunnel</span><span class="label">09 / 10</span></div>
+            <h3>Boundary Layer Over a Flat Plate</h3>
+            <p>Mapped two velocity profiles to track boundary-layer growth, transition, and momentum-based drag.</p>
+            <a class="btn" href="Projects/boundary-layer-flow.html">Read case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
-        <article class="work-card showcase-card">
-          <a class="work-media showcase-media nozzle-card-media" href="Projects/converging-diverging-nozzle.html" aria-label="View the converging-diverging nozzle experiment"><img src="images/Compressible Nozzle/nozzle-schematic.png" alt="Diagram of the converging-diverging nozzle and its three pressure taps" width="695" height="250" loading="lazy" decoding="async"><span class="project-plate">Project—10</span></a>
-          <div class="work-copy"><div class="work-meta"><span>Fluids · Compressible</span><span>10 / 10</span></div><h3>Converging-Diverging Nozzle</h3><p>Identified choked flow from pressure ratio and mass-flow data, then reconciled a sensor-location anomaly.</p><a class="text-link" href="Projects/converging-diverging-nozzle.html">Read case study <span aria-hidden="true">→</span></a></div>
+        <article class="feature feature--reverse reveal">
+          <a class="feature__media feature__media--contain" href="Projects/converging-diverging-nozzle.html" aria-label="View the converging-diverging nozzle experiment"><img src="images/Compressible Nozzle/nozzle-schematic.png" alt="Diagram of the converging-diverging nozzle and its three pressure taps" width="695" height="250" loading="lazy" decoding="async"><span class="feature__plate">Project—10</span></a>
+          <div class="feature__copy">
+            <div class="feature__meta"><span class="label">Fluids · Compressible</span><span class="label">10 / 10</span></div>
+            <h3>Converging-Diverging Nozzle</h3>
+            <p>Identified choked flow from pressure ratio and mass-flow data, then reconciled a sensor-location anomaly.</p>
+            <a class="btn" href="Projects/converging-diverging-nozzle.html">Read case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="experience" class="home-section experience-section" aria-labelledby="experience-title">
-      <header class="section-heading section-heading--compact">
+      <header class="section-head reveal">
         <div>
-          <p class="section-code">02 / EXPERIENCE</p>
+          <p class="section-code">02 / Experience</p>
           <h2 id="experience-title">Built from the shop floor up.</h2>
         </div>
-        <a class="text-link" href="Projects/timeline.html">Full timeline <span aria-hidden="true">→</span></a>
+        <div class="section-head__aside">
+          <a class="btn" href="Projects/timeline.html">Full timeline <span aria-hidden="true">→</span></a>
+        </div>
       </header>
 
-      <ol class="experience-list">
+      <ol class="experience-list reveal">
         <li>
           <time datetime="2026-06">2026</time>
           <div><h3>Rapid Prototyping &amp; Manufacturing Engineering Intern</h3><p>Vandenberg Space Force Base</p></div>
-          <span>Engineering</span>
+          <span class="label">Engineering</span>
         </li>
         <li>
           <time datetime="2025">2025—Now</time>
           <div><h3>Rear Suspension Team Member</h3><p>Cal Poly Racing · Baja SAE</p></div>
-          <span>Engineering</span>
+          <span class="label">Engineering</span>
         </li>
         <li>
           <time datetime="2024-01">2024—Now</time>
           <div><h3>Engineering, Math &amp; Physics Tutor</h3><p>Fresno City College Tutorial Center</p></div>
-          <span>Teaching</span>
+          <span class="label">Teaching</span>
         </li>
         <li>
           <time datetime="2023-09">2023—2025</time>
           <div><h3>Assistant Wrestling Coach</h3><p>Madera Unified School District</p></div>
-          <span>Leadership</span>
+          <span class="label">Leadership</span>
         </li>
       </ol>
     </section>
 
-    <section id="skills" class="home-section capabilities-section" aria-labelledby="skills-title">
-      <div class="capabilities-intro">
-        <p class="section-code">03 / CAPABILITIES</p>
+    <section id="skills" class="home-section mission" aria-labelledby="skills-title">
+      <p class="section-code reveal">03 / Capabilities</p>
+      <blockquote class="reveal">
         <h2 id="skills-title">Tools are only useful when they produce better decisions.</h2>
         <p>My workflow moves from problem definition to CAD, analysis, drawings, and physical validation.</p>
-      </div>
-      <div class="capability-grid">
-        <article><span>01</span><h3>Design</h3><p>SolidWorks · Fusion 360 · assemblies · engineering drawings · GD&amp;T</p></article>
-        <article><span>02</span><h3>Analysis</h3><p>SolidWorks Simulation · FEA validation · EES · mechanics · design tradeoffs</p></article>
-        <article><span>03</span><h3>Manufacturing</h3><p>Manual mill · lathe · prototyping · fabrication · design for manufacturing</p></article>
-        <article><span>04</span><h3>Communication</h3><p>Technical documentation · tutoring · team leadership · design reviews</p></article>
+      </blockquote>
+      <div class="capability-grid reveal">
+        <article><span class="label">01</span><h3>Design</h3><p>SolidWorks · Fusion 360 · assemblies · engineering drawings · GD&amp;T</p></article>
+        <article><span class="label">02</span><h3>Analysis</h3><p>SolidWorks Simulation · FEA validation · EES · mechanics · design tradeoffs</p></article>
+        <article><span class="label">03</span><h3>Manufacturing</h3><p>Manual mill · lathe · prototyping · fabrication · design for manufacturing</p></article>
+        <article><span class="label">04</span><h3>Communication</h3><p>Technical documentation · tutoring · team leadership · design reviews</p></article>
       </div>
     </section>
 
-    <section id="contact" class="home-section contact-section" aria-labelledby="contact-title">
-      <div>
-        <p class="section-code">04 / CONTACT</p>
-        <h2 id="contact-title">Let’s build something that has to work.</h2>
-        <div class="contact-profile">
-          <img src="images/california-polytechnic-state-university-logo-png_seeklogo-341814.png" alt="Cal Poly university seal" width="600" height="600" loading="lazy" decoding="async">
-          <div class="contact-profile__details">
-            <strong>Apolonio Ordaz</strong>
-            <span>Cal Poly San Luis Obispo</span>
-            <span>B.S. Mechanical Engineering · Dec 2027</span>
-            <a href="mailto:apolonioordaz5@gmail.com">apolonioordaz5@gmail.com</a>
+    <section id="contact" class="cta-band" aria-labelledby="contact-title">
+      <div class="home-section cta-band__inner reveal">
+        <div>
+          <p class="section-code">04 / Contact</p>
+          <h2 id="contact-title">Let’s build something that has to work.</h2>
+        </div>
+        <div>
+          <div class="contact-profile">
+            <img src="images/california-polytechnic-state-university-logo-png_seeklogo-341814.png" alt="Cal Poly university seal" width="600" height="600" loading="lazy" decoding="async">
+            <div class="contact-profile__details">
+              <strong>Apolonio Ordaz</strong>
+              <span>Cal Poly San Luis Obispo</span>
+              <span>B.S. Mechanical Engineering · Dec 2027</span>
+              <a href="mailto:apolonioordaz5@gmail.com">apolonioordaz5@gmail.com</a>
+            </div>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn" href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="btn btn--quiet" href="resume-update.html">Request resume <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-      </div>
-      <div class="contact-actions">
-        <a class="action action--primary" href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
-        <a class="action action--quiet" href="resume-update.html">Request resume <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer home-footer">
-    <p class="home-footer-meta">© 2026 Apolonio Ordaz · Engineering portfolio</p>
+  <footer class="site-foot">
+    <div class="site-foot__inner">
+      <div class="site-foot__top">
+        <div class="site-foot__mission">
+          <a class="site-foot__brand" href="index.html" aria-label="Apolonio Ordaz, home">
+            <span class="brand-mark" aria-hidden="true">AO</span>
+            <span>Apolonio Ordaz</span>
+          </a>
+          <p>Cal Poly SLO mechanical engineering student focused on design, analysis, rapid prototyping, and manufacturing.</p>
+          <div class="site-foot__actions">
+            <a class="btn btn--sm" href="mailto:apolonioordaz5@gmail.com">Email <span aria-hidden="true">↗</span></a>
+            <a class="btn btn--sm btn--quiet" href="https://www.linkedin.com/in/a-ordaz5" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <nav class="site-foot__cols" aria-label="Footer navigation">
+          <div>
+            <p class="label">Work</p>
+            <ul>
+              <li><a href="Projects/fea-analysis.html">FEA Studies</a></li>
+              <li><a href="Projects/knee-scooter.html">PVC Knee Scooter</a></li>
+              <li><a href="Projects/Project%203.html">Bottle Carrier</a></li>
+              <li><a href="Projects/ncas.html">Ares Abode</a></li>
+              <li><a href="Projects/mass-moment-inertia.html">B-2 Inertia</a></li>
+              <li><a href="Projects/Bottling%20Station.html">Bottling Station</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="label">Fluids</p>
+            <ul>
+              <li><a href="Projects/cylinder-flow.html">Cylinder Flow</a></li>
+              <li><a href="Projects/duct-bend-flow.html">Duct Bend</a></li>
+              <li><a href="Projects/boundary-layer-flow.html">Boundary Layer</a></li>
+              <li><a href="Projects/converging-diverging-nozzle.html">C-D Nozzle</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="label">Site</p>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="Projects/timeline.html">Timeline</a></li>
+              <li><a href="resume-update.html">Resume</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="site-foot__bottom">
+        <p>© 2026 Apolonio Ordaz · Engineering portfolio</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

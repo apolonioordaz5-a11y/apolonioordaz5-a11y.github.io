@@ -1,6 +1,148 @@
-// This file is currently just smooth-scrolling for the in-page nav links
-// (Home / Projects). It's not required for the site to work, but it makes
-// clicking "Projects" in the nav glide down instead of jumping instantly.
+// Site-wide behavior: fixed header, dropdowns, mobile menu, scroll reveal,
+// smooth in-page scrolling, mailto fallback, image lightbox, and timeline.
+
+document.documentElement.classList.add('js');
+
+var prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+// Header: transparent over the hero, solid once the page scrolls.
+var masthead = document.querySelector('[data-masthead]');
+if (masthead) {
+  var updateMasthead = function () {
+    masthead.classList.toggle('is-solid', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', updateMasthead, { passive: true });
+  updateMasthead();
+
+  // Mark the link for the current page.
+  var currentPage = window.location.href.split('#')[0];
+  document.querySelectorAll('.masthead a, .mobile-menu a').forEach(function (link) {
+    if (link.href === currentPage && !link.classList.contains('masthead__brand')) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+}
+
+// Dropdowns: hover opens them on desktop (CSS); click/tap and keyboard here.
+var navItems = Array.from(document.querySelectorAll('.nav-item--has-menu'));
+
+function setDropdown(item, open) {
+  item.classList.toggle('is-open', open);
+  item.querySelector('.nav-trigger').setAttribute('aria-expanded', String(open));
+}
+
+navItems.forEach(function (item) {
+  var trigger = item.querySelector('.nav-trigger');
+
+  trigger.addEventListener('click', function () {
+    var willOpen = !item.classList.contains('is-open');
+    navItems.forEach(function (other) { setDropdown(other, false); });
+    setDropdown(item, willOpen);
+  });
+
+  item.addEventListener('focusout', function (event) {
+    if (!item.contains(event.relatedTarget)) {
+      setDropdown(item, false);
+    }
+  });
+
+  item.addEventListener('mouseleave', function () {
+    setDropdown(item, false);
+  });
+});
+
+document.addEventListener('click', function (event) {
+  navItems.forEach(function (item) {
+    if (!item.contains(event.target)) setDropdown(item, false);
+  });
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key !== 'Escape') return;
+  navItems.forEach(function (item) {
+    if (item.classList.contains('is-open')) {
+      setDropdown(item, false);
+      item.querySelector('.nav-trigger').focus();
+    }
+  });
+});
+
+// Mobile menu: full-screen overlay.
+var menuToggle = document.querySelector('.masthead__toggle');
+var mobileMenu = document.getElementById('mobile-menu');
+
+if (menuToggle && mobileMenu) {
+  var menuClose = mobileMenu.querySelector('.mobile-menu__close');
+
+  var openMenu = function () {
+    mobileMenu.hidden = false;
+    // Next frame so the opacity transition runs.
+    window.requestAnimationFrame(function () { mobileMenu.classList.add('is-open'); });
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+    menuClose.focus();
+  };
+
+  var closeMenu = function (restoreFocus) {
+    if (mobileMenu.hidden) return;
+    mobileMenu.classList.remove('is-open');
+    mobileMenu.hidden = true;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+    if (restoreFocus) menuToggle.focus();
+  };
+
+  menuToggle.addEventListener('click', openMenu);
+  menuClose.addEventListener('click', function () { closeMenu(true); });
+
+  // Capture phase so the menu closes before in-page links start scrolling.
+  mobileMenu.addEventListener('click', function (event) {
+    if (event.target.closest('a')) closeMenu(false);
+  }, true);
+
+  mobileMenu.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenu(true);
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    // Keep keyboard focus inside the overlay while it is open.
+    var focusable = Array.from(mobileMenu.querySelectorAll('a, button, summary')).filter(function (el) {
+      return el.offsetParent !== null;
+    });
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  window.matchMedia('(min-width: 961px)').addEventListener('change', function (event) {
+    if (event.matches) closeMenu(false);
+  });
+}
+
+// Scroll reveal: fade and slide sections up as they enter the viewport.
+var revealItems = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !prefersReducedMotionQuery.matches) {
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+  revealItems.forEach(function (item) { revealObserver.observe(item); });
+} else {
+  revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   link.addEventListener('click', function (event) {
