@@ -4,7 +4,15 @@
    here. Tweak these to retheme the whole site.
 =========================================== */
 :root {
-  /* Core palette — strict black & white */
+  /* Signature: FEA contour legend, 6 stepped bands (low → high stress) */
+  --stress-steps: linear-gradient(90deg, #2340b8 0 16.66%, #1f86c9 0 33.33%, #2aa889 0 50%, #a8b334 0 66.66%, #d08a2c 0 83.33%, #c23b2e 0);
+
+  /* Project category colors (match the Work dropdown groups) */
+  --cat-design: #ff8a3d;    /* Design & build — orange */
+  --cat-analysis: #a78bfa;  /* Analysis & dynamics — violet */
+  --cat-fluids: #22d3ee;    /* Fluid mechanics — cyan */
+
+  /* Core palette — black & white base */
   --bg: #0a0a0a;
   --bg-deep: #000000;
   --fg: #ffffff;
@@ -1161,6 +1169,97 @@ body:not(.portfolio-home) .masthead {
   font-size: 24px;
   line-height: 1;
   cursor: pointer;
+}
+
+/* ===========================================
+   COLOR ACCENTS
+   FEA legend bars + category colors.
+=========================================== */
+
+/* FEA legend under section headings: stepped contour bands + tick marks,
+   like a simulation color scale, rather than a smooth rainbow. */
+.section-head h2::after,
+.cta-band h2::after,
+.mission blockquote h2::after {
+  display: block;
+  width: 145px;
+  height: 11px;
+  margin-top: 28px;
+  background:
+    var(--stress-steps) left top / 144px 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--muted) 0 1px, transparent 1px 24px) left 6px / 145px 5px no-repeat;
+  content: "";
+}
+
+.mission blockquote h2::after {
+  margin-inline: auto;
+}
+
+/* Hover underline on nav and text links (plain white) */
+.nav-link,
+.nav-trigger,
+.text-link {
+  position: relative;
+}
+
+.nav-link::after,
+.nav-trigger::after {
+  position: absolute;
+  right: 14px;
+  bottom: 22px;
+  left: 14px;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--fg);
+  content: "";
+  transition: transform var(--dur) var(--ease);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link[aria-current="page"]::after,
+.nav-trigger:hover::after,
+.nav-item.is-open > .nav-trigger::after {
+  transform: scaleX(1);
+}
+
+/* Category colors */
+[data-category="design"]   { --cat: var(--cat-design); }
+[data-category="analysis"] { --cat: var(--cat-analysis); }
+[data-category="fluids"]   { --cat: var(--cat-fluids); }
+
+.label[data-category] {
+  color: var(--cat);
+}
+
+.feature[data-category] .feature__meta {
+  border-bottom-color: color-mix(in srgb, var(--cat) 45%, var(--gray-2));
+}
+
+.feature[data-category] .feature__meta .label:first-child {
+  color: var(--cat);
+}
+
+.feature[data-category] .feature__meta .label:first-child::before {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  background: var(--cat);
+  vertical-align: 1px;
+  content: "";
+}
+
+.feature[data-category] .feature__plate {
+  box-shadow: inset 0 -2px 0 var(--cat);
+}
+
+.feature[data-category] .feature__copy .btn:hover,
+.feature[data-category] .feature__copy .btn:focus-visible {
+  border-color: var(--cat);
+  background: var(--cat);
+  color: var(--bg-deep);
 }
 
 /* ===========================================

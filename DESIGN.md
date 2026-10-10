@@ -12,6 +12,10 @@ colors:
   muted: "#888888"
   text-2: "#B3B3B3"
   overlay: "rgba(0, 0, 0, 0.55)"
+  stress-steps: "6 hard bands: #2340B8, #1F86C9, #2AA889, #A8B334, #D08A2C, #C23B2E"
+  cat-design: "#FF8A3D"
+  cat-analysis: "#A78BFA"
+  cat-fluids: "#22D3EE"
 typography:
   family: "Inter (Google Fonts), Helvetica Neue, Arial, sans-serif"
   weights: "300 taglines · 400 body · 600 labels/buttons · 700–800 headlines"
@@ -47,12 +51,14 @@ The site should feel like a serious hardware company's site: near-black canvas, 
 - **Usage scene:** Desktop-first recruiting review with a complete narrow-mobile path. Project evidence must remain visible before supporting biography.
 - **Register:** Brand portfolio on the homepage; supporting project pages and the timeline use a quieter technical-document register within the same black-and-white system.
 - **Memorable signature:** Full-viewport grayscale hero, alternating image/copy feature blocks, and a minimal black footer with link columns.
-- **Restraint:** No accent color, no rounded corners, no shadows, subtle motion only, and no invented renders.
+- **Restraint:** Color only through the stress gradient and category colors, no rounded corners, no shadows, subtle motion only, and no invented renders.
 - **Token ownership/runtime mapping:** `style.css` is the canonical runtime source; this file mirrors its `:root` values. Older case-study rules still reference legacy names (`--carbon`, `--alloy`, `--steel`, `--line`, `--safety`…), which are aliased to the new tokens in the same `:root` block.
 
 ## Colors
 
 Strict black and white. `bg` is the page canvas; `bg-deep` (pure black) is used for the solid header, dropdowns, mobile overlay, CTA band, and footer. White is primary text and the only "accent": it is used for button outlines, button hover fills, and focus rings. `text-2` carries secondary copy, `muted` carries small labels and metadata, and `gray-1`/`gray-2`/`gray-3` are reserved for surfaces, borders, and dividers. The case-study B-2 diagram keeps its own internal palette because it is a figure, not chrome.
+
+**Color accents.** The signature is a small FEA contour legend (`stress-steps`): six hard, muted color bands from blue to red with gray tick marks beneath, shown only under section headings. It deliberately avoids a smooth full-spectrum gradient so it reads as a simulation scale, not a rainbow. Nav hover underlines are plain white. Projects carry a category color that matches the Work dropdown groups: orange for Design & build, violet for Analysis & dynamics, cyan for Fluid mechanics. It shows on card tag lines (with a small square marker), the card divider, the project plate edge, the card button hover fill, and the dropdown group labels. Add `data-category="design|analysis|fluids"` to a card or label to apply it.
 
 ## Typography
 
@@ -92,5 +98,5 @@ The header background/border transition and hover fills run at about 240ms. Sect
 
 - **Do:** Lead with engineering evidence and describe personal contribution precisely.
 - **Do:** Add new colors only as `:root` tokens; never hard-code hex values in components.
-- **Don't:** Introduce accent colors, rounded corners, glassmorphism, or shadows.
+- **Don't:** Introduce colors outside the stress gradient and the three category colors, or add rounded corners, glassmorphism, or shadows.
 - **Don't:** Invent confidential-looking imagery, performance metrics, or project outcomes to fill a visual gap.
