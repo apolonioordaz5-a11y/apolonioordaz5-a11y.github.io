@@ -12,6 +12,12 @@
   --cat-analysis: #a78bfa;  /* Analysis & dynamics — violet */
   --cat-fluids: #22d3ee;    /* Fluid mechanics — cyan */
 
+  /* Timeline categories, taken from the FEA legend (low → high) */
+  --tl-education: #1f86c9;   /* blue */
+  --tl-engineering: #2aa889; /* green */
+  --tl-leadership: #d08a2c;  /* orange */
+  --tl-work: #e8604a;        /* red, lifted slightly for text contrast */
+
   /* Core palette — black & white base */
   --bg: #0a0a0a;
   --bg-deep: #000000;
@@ -3370,19 +3376,35 @@ body:not(.portfolio-home) .masthead {
 }
 
 .filter-dot--education {
-  background: #ffffff;
+  background: var(--tl-education);
 }
 
 .filter-dot--engineering {
-  background: #bbbbbb;
+  background: var(--tl-engineering);
 }
 
 .filter-dot--leadership {
-  background: #888888;
+  background: var(--tl-leadership);
 }
 
 .filter-dot--work {
-  background: #dddddd;
+  background: var(--tl-work);
+}
+
+/* A selected category fills with its own color */
+.timeline-filter.is-active[data-filter="education"] { --filter-tone: var(--tl-education); }
+.timeline-filter.is-active[data-filter="engineering"] { --filter-tone: var(--tl-engineering); }
+.timeline-filter.is-active[data-filter="leadership"] { --filter-tone: var(--tl-leadership); }
+.timeline-filter.is-active[data-filter="work"] { --filter-tone: var(--tl-work); }
+
+.timeline-filter.is-active[data-filter]:not([data-filter="all"]) {
+  border-color: var(--filter-tone);
+  background: var(--filter-tone);
+  color: #000000;
+}
+
+.timeline-filter.is-active:not([data-filter="all"]) .filter-dot {
+  background: #000000;
 }
 
 .timeline-filter.is-active .filter-dot--all {
@@ -3433,19 +3455,13 @@ body:not(.portfolio-home) .masthead {
   scroll-margin-top: 90px;
 }
 
-.timeline-item[data-category="education"] {
-  --timeline-tone: #ffffff;
-  --timeline-soft: #1a1a1a;
-}
+.timeline-item[data-category="education"] { --timeline-tone: var(--tl-education); }
+.timeline-item[data-category="engineering"] { --timeline-tone: var(--tl-engineering); }
+.timeline-item[data-category="leadership"] { --timeline-tone: var(--tl-leadership); }
+.timeline-item[data-category="work"] { --timeline-tone: var(--tl-work); }
 
-.timeline-item[data-category="engineering"] {
-  --timeline-tone: #bbbbbb;
-  --timeline-soft: #1a1a1a;
-}
-
-.timeline-item[data-category="leadership"] {
-  --timeline-tone: #888888;
-  --timeline-soft: #1a1a1a;
+.timeline-item[data-category] {
+  --timeline-soft: color-mix(in srgb, var(--timeline-tone) 18%, #0a0a0a);
 }
 
 .timeline-item:last-child {
