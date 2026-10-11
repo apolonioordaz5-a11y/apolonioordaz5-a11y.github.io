@@ -66,7 +66,7 @@ Inter throughout. Headlines are big and bold (700–800) with tight negative tra
 
 ## Layout
 
-Content is capped at 1440px with fluid gutters. The homepage is a stack of full-width sections with generous vertical padding: hero (100vh, content bottom-left), profile strip, selected work as alternating image-left/image-right feature blocks, experience list, a centered mission statement with the capability grid, and a black CTA band. Case studies keep their evidence-first reading column. Inner pages pad the body by the header height; `scroll-padding-top` and `scroll-margin-top` keep anchor targets clear of the fixed header.
+Content is capped at 1440px with fluid gutters. The homepage is a stack of full-width sections with generous vertical padding: hero (100vh, content bottom-left), profile strip, selected work as alternating image-left/image-right feature blocks (a horizontal carousel version is commented out in index.html for later), experience list, a centered mission statement with the capability grid, and a black CTA band. Case studies keep their evidence-first reading column. Inner pages pad the body by the header height; `scroll-padding-top` and `scroll-margin-top` keep anchor targets clear of the fixed header.
 
 ## Elevation & Depth
 

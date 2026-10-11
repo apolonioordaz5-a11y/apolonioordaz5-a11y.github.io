@@ -144,6 +144,113 @@ if ('IntersectionObserver' in window && !prefersReducedMotionQuery.matches) {
   revealItems.forEach(function (item) { item.classList.add('is-visible'); });
 }
 
+// Project carousel: arrow buttons, mouse drag, and a scroll progress line.
+// Touch swipe and keyboard arrows come from native horizontal scrolling.
+document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+  var track = carousel.querySelector('.work-track');
+  var prev = carousel.querySelector('.carousel-btn--prev');
+  var next = carousel.querySelector('.carousel-btn--next');
+  var progress = carousel.querySelector('.carousel-progress');
+
+  function slideStep() {
+    var slide = track.querySelector('.work-slide');
+    return slide ? slide.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : track.clientWidth;
+  }
+
+  function updateCarousel() {
+    var max = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+    if (progress) {
+      var visible = max > 0 ? track.clientWidth / track.scrollWidth : 1;
+      var ratio = max > 0 ? track.scrollLeft / max : 1;
+      progress.style.setProperty('--progress', (visible + (1 - visible) * ratio).toFixed(3));
+    }
+  }
+
+  // Remember where a button click is heading so quick repeated clicks
+  // each advance one card instead of interrupting the previous scroll.
+  var targetIndex = null;
+  var scrollIdleTimer;
+
+  function scrollByStep(direction) {
+    var step = slideStep();
+    var max = track.scrollWidth - track.clientWidth;
+    var lastIndex = Math.ceil(max / step - 0.01);
+    var base = targetIndex === null ? Math.round(track.scrollLeft / step) : targetIndex;
+    targetIndex = Math.min(lastIndex, Math.max(0, base + direction));
+    track.scrollTo({
+      left: Math.min(targetIndex * step, max),
+      behavior: prefersReducedMotionQuery.matches ? 'auto' : 'smooth'
+    });
+    // Forget the target if no scrolling follows (e.g. already at the end).
+    clearTimeout(scrollIdleTimer);
+    scrollIdleTimer = setTimeout(function () { targetIndex = null; }, 700);
+  }
+
+  prev.addEventListener('click', function () { scrollByStep(-1); });
+  next.addEventListener('click', function () { scrollByStep(1); });
+  track.addEventListener('scroll', function () {
+    updateCarousel();
+    clearTimeout(scrollIdleTimer);
+    scrollIdleTimer = setTimeout(function () { targetIndex = null; }, 150);
+  }, { passive: true });
+  window.addEventListener('resize', updateCarousel);
+
+  // Click-and-drag for mouse users.
+  var dragStartX = 0;
+  var dragStartScroll = 0;
+  var dragMoved = false;
+  var pointerDown = false;
+
+  track.addEventListener('pointerdown', function (event) {
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+    pointerDown = true;
+    dragMoved = false;
+    dragStartX = event.clientX;
+    dragStartScroll = track.scrollLeft;
+  });
+
+  track.addEventListener('pointermove', function (event) {
+    if (!pointerDown) return;
+    var dx = event.clientX - dragStartX;
+    if (!dragMoved && Math.abs(dx) > 6) {
+      dragMoved = true;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(event.pointerId);
+    }
+    if (dragMoved) track.scrollLeft = dragStartScroll - dx;
+  });
+
+  function endDrag(event) {
+    if (!pointerDown) return;
+    pointerDown = false;
+    if (!dragMoved) return;
+    track.classList.remove('is-dragging');
+    if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+    // Snap to the nearest card after letting go.
+    var step = slideStep();
+    track.scrollTo({
+      left: Math.round(track.scrollLeft / step) * step,
+      behavior: prefersReducedMotionQuery.matches ? 'auto' : 'smooth'
+    });
+  }
+
+  track.addEventListener('pointerup', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+
+  // Swallow the click that ends a drag so it doesn't open a project.
+  track.addEventListener('click', function (event) {
+    if (dragMoved) {
+      event.preventDefault();
+      event.stopPropagation();
+      dragMoved = false;
+    }
+  }, true);
+
+  updateCarousel();
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   link.addEventListener('click', function (event) {
     var targetId = link.getAttribute('href');
