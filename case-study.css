@@ -237,6 +237,10 @@
   padding: 20px 20px 24px;
 }
 
+.cs-steps img.cs-focus-top {
+  object-position: center 10%;
+}
+
 .cs-step-num {
   color: var(--cs-accent);
   font: 700 13px/1 var(--font);
