@@ -810,8 +810,16 @@ body:not(.portfolio-home) .masthead {
 }
 
 .feature__media--contain img {
-  padding: clamp(16px, 3vw, 40px);
-  object-fit: contain;
+  object-fit: cover;
+}
+
+/* Keep the subject of tall photos in view when cropped to fill */
+.media-focus--b2 {
+  object-position: center 72%;
+}
+
+.media-focus--carrier {
+  object-position: center 82%;
 }
 
 .feature__media--diagram {
@@ -932,8 +940,7 @@ body:not(.portfolio-home) .masthead {
 }
 
 .work-slide__media--contain img {
-  padding: clamp(16px, 2.4vw, 32px);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .work-slide__media--diagram {
