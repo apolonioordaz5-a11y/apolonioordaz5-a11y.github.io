@@ -1907,6 +1907,149 @@ body:not(.portfolio-home) .masthead {
   object-fit: cover;
 }
 
+.peppr-overview {
+  max-width: 1240px;
+}
+
+.peppr-overview__intro {
+  max-width: 980px;
+  padding: clamp(40px, 8vw, 96px) 0 48px;
+}
+
+.peppr-overview__intro h1 {
+  max-width: 850px;
+  margin: 16px 0 22px;
+  font-size: clamp(52px, 8vw, 112px);
+  letter-spacing: -0.065em;
+}
+
+.peppr-overview__intro > p:last-child,
+.peppr-overview__close > p:not(.cs-label) {
+  max-width: 700px;
+  color: var(--text-2);
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.5;
+}
+
+.peppr-overview__facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--gray-2);
+  background: var(--gray-2);
+}
+
+.peppr-overview__facts > div {
+  min-height: 122px;
+  padding: 22px;
+  background: var(--bg-deep);
+}
+
+.peppr-overview__facts strong,
+.peppr-overview__facts span {
+  display: block;
+}
+
+.peppr-overview__facts strong {
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1;
+}
+
+.peppr-overview__facts span {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.peppr-overview .cs-note {
+  margin: 14px 0 48px;
+}
+
+.peppr-collage {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: repeat(2, clamp(220px, 24vw, 320px));
+  gap: 10px;
+}
+
+.peppr-collage figure {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  background: var(--gray-1);
+}
+
+.peppr-collage__cad {
+  grid-row: 1 / span 2;
+}
+
+.peppr-collage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur) var(--ease);
+}
+
+.peppr-collage__cad img {
+  object-fit: contain;
+  background: #f4f4f4;
+}
+
+.peppr-collage figure:hover img {
+  transform: scale(1.025);
+}
+
+.peppr-collage figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 18px 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.88));
+  color: var(--fg);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.peppr-collage figcaption span {
+  margin-right: 12px;
+  color: var(--cat-design);
+}
+
+.peppr-overview__close {
+  max-width: 760px;
+  padding: clamp(64px, 10vw, 130px) 0;
+}
+
+.peppr-overview__close .btn {
+  margin-top: 28px;
+}
+
+@media (max-width: 720px) {
+  .peppr-overview__facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .peppr-collage {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .peppr-collage__cad {
+    grid-row: auto;
+  }
+
+  .peppr-collage figure {
+    min-height: 320px;
+  }
+}
+
 .project-detail .fea-callout {
   margin-top: 30px;
   padding: 24px 26px;
