@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coupler-lead case study for WERC Task 4: a dust-tolerant, capacitive wireless charging interface for a lunar rover.">
+  <meta name="theme-color" content="#000000">
+  <title>WERC Capacitive Rover Coupler | Apolonio Ordaz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../style.css?v=9">
+  <link rel="stylesheet" href="../case-study.css?v=4">
+</head>
+<body id="top" class="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="masthead" data-masthead>
+    <div class="masthead__inner">
+      <a class="masthead__brand" href="../index.html" aria-label="Apolonio Ordaz, home"><span class="brand-mark" aria-hidden="true">AO</span><span>Apolonio Ordaz</span></a>
+      <nav class="masthead__nav" aria-label="Primary navigation"><ul class="nav-list"><li class="nav-item"><a class="nav-link" href="../index.html#projects">Work</a></li><li class="nav-item"><a class="nav-link" href="../index.html#experience">Experience</a></li><li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li></ul></nav>
+      <a class="btn btn--sm masthead__cta" href="../resume-update.html">Resume <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main-content" class="project-page cs-page" style="--cs-accent: var(--cat-design)">
+    <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">WERC Task 4 &middot; Coupler lead &middot; In development</p>
+      <h1>Designing the interface that lets a lunar rover charge without touching the station.</h1>
+      <p class="cs-lead">I lead the coupler subteam for WERC Task 4, translating a capacitive wireless-power concept into a rover-to-station interface that can tolerate an air gap, imperfect docking, lunar dust, and extreme cold.</p>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Coupler lead</dd></div>
+        <div><dt>Program</dt><dd>WERC 2027 Task 4</dd></div>
+        <div><dt>System</dt><dd>Capacitive wireless charging</dd></div>
+        <div><dt>Status</dt><dd>Concept &amp; preliminary design</dd></div>
+      </dl>
+    </header>
+
+    <figure class="cs-hero cs-hero--contain">
+      <img src="../images/WERC/capacitive-coupler-schematic.svg" alt="Schematic of a rover and charging station with two rounded capacitive plates on each side, separated by a non-contact air gap">
+    </figure>
+
+    <section class="cs-story" aria-label="Project summary">
+      <article><p class="cs-label">The challenge</p><p>Deliver power without conductive contacts that can be fouled by lunar regolith, while still making the coupling plates practical to dock, protect, and build.</p></article>
+      <article><p class="cs-label">My role</p><p>Lead the plate architecture, dust-mitigation concept, design tradeoffs, and coupler-specific test plan across the rover and charging station.</p></article>
+      <article><p class="cs-label">The direction</p><p>A four-plate, rounded-rectangle coupler mounted vertically on the rover&rsquo;s front face, with passive plate protection and an active dust-cleaning layer on the station.</p></article>
+    </section>
+
+    <section class="cs-stats" aria-label="Bench-scale requirements and configuration">
+      <div><strong>25 W</strong><span>minimum DC target</span></div>
+      <div><strong>&ge;70%</strong><span>target efficiency</span></div>
+      <div><strong>&ge;25 mm</strong><span>bench-scale air gap</span></div>
+      <div><strong>4</strong><span>coupling plates</span></div>
+    </section>
+    <p class="cs-note">These are project requirements and preliminary design targets, not measured results.</p>
+
+    <section class="cs-section">
+      <h2>Why four rounded plates?</h2>
+      <p class="cs-section-lead">The interface needs a self-contained return path and a geometry that reduces electric-field concentration at exposed edges.</p>
+      <ol class="cs-steps cs-steps--three">
+        <li><div><span class="cs-step-num">01</span><h3>Build in the return path</h3><p>Two plates on the rover and two on the station form two coupling pairs, avoiding dependence on a ground return through dry lunar regolith.</p></div></li>
+        <li><div><span class="cs-step-num">02</span><h3>Control edge fields</h3><p>Rounded rectangle plates preserve usable area while reducing the field peaks that sharp corners create. A thin PTFE film adds a dielectric barrier.</p></div></li>
+        <li><div><span class="cs-step-num">03</span><h3>Dock where we can see</h3><p>Front-mounted vertical plates keep the docking target visible to the rover camera, preserve ground clearance, and help loose dust shed rather than collect.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Keeping dust out of the power path</h2>
+      <p class="cs-section-lead">The concept uses passive protection on the rover and active cleaning at the station&mdash;without asking the charge plates to do both jobs.</p>
+      <dl class="cs-facts cs-facts--spaced">
+        <div><dt>Rover protection</dt><dd>High-mounted plates, wheel fenders, and a spring-return door keep the rover-side plates covered while driving.</dd></div>
+        <div><dt>Passive opening</dt><dd>A fixed finger on the station opens the rover door only as it docks, eliminating a rover-side actuator from the baseline concept.</dd></div>
+        <div><dt>Station cleaning</dt><dd>An electrodynamic dust-shield layer is planned as a separate cover layer, run between charges to clear residual dust.</dd></div>
+        <div><dt>Safe failure</dt><dd>If the rover misses the opening feature, the plate remains covered and charging does not begin.</dd></div>
+      </dl>
+    </section>
+
+    <section class="cs-section">
+      <h2>What I&rsquo;m validating next</h2>
+      <ol class="cs-steps cs-steps--three">
+        <li><div><span class="cs-step-num">01</span><h3>Coupling performance</h3><p>Measure input/output power, capacitance, and efficiency as plate separation and lateral misalignment change.</p></div></li>
+        <li><div><span class="cs-step-num">02</span><h3>Dust tolerance</h3><p>Compare capacitance and Q with 0, 1, 5, and 10 mm of lunar-regolith simulant on the plates, and test the EDS cover with charging disabled.</p></div></li>
+        <li><div><span class="cs-step-num">03</span><h3>Integration limits</h3><p>Check plate protection, door engagement, alignment tolerance, and the mechanical package against the rover docking and thermal constraints.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I&rsquo;m using</h2>
+      <ul class="cs-skills"><li>Systems engineering</li><li>Concept development</li><li>Design trade studies</li><li>Electrical-mechanical integration</li><li>Test planning</li><li>Technical leadership</li></ul>
+    </section>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="peppr-hall-effect-thruster.html"><span>Related project</span>PEPPR Hall-Effect Thruster &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+  </main>
+  <script src="../script.js?v=5"></script>
+</body>
+</html>
