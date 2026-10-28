@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -122,13 +123,82 @@
       </div>
     </nav>
   </div>
-  <main id="main-content" class="project-page fea-page nozzle-page">
+  <main id="main-content" class="project-page fea-page nozzle-page cs-page" style="--cs-accent: var(--cat-fluids)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
-    <p class="project-code">Compressible flow / Nozzle testing</p><h1>Choked flow through a converging-diverging nozzle</h1>
-    <p class="project-subtitle">Pressure ratios, Mach number, and the onset of sonic flow | ME 347 | Cal Poly San Luis Obispo</p>
-    <div class="fea-tags" aria-label="Project skills"><span class="fea-tag">Compressible Flow</span><span class="fea-tag">Choked Flow</span><span class="fea-tag">Pressure Measurement</span><span class="fea-tag">Mach Number</span><span class="fea-tag">Model Validation</span></div>
-    <figure class="fea-hero nozzle-hero"><img class="no-lightbox" src="../images/Compressible Nozzle/nozzle-schematic.png" alt="Converging-diverging nozzle schematic with pressure taps at the inlet, throat, and outlet"><figcaption>Pressure taps at the inlet, throat, and outlet tracked the nozzle as the compressor drew increasing mass flow.</figcaption></figure>
-    <p class="fea-intro">Worked with a team of four on this lab, and I tested a converging-diverging nozzle across a series of compressor settings. We used pressure ratios to identify choking, calculated throat Mach number, and compared incompressible and compressible one-dimensional models.</p>
+
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Compressible flow &middot; ME 347 &middot; Cal Poly</p>
+      <h1>Pushed airflow to the speed of sound in a nozzle.</h1>
+      <p class="cs-lead">With a team of four, I ramped up a compressor until the flow through a nozzle&rsquo;s throat choked at Mach 1, then solved a data anomaly that seemed to say the flow had gone supersonic.</p>
+
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Testing &amp; analysis</dd></div>
+        <div><dt>Team</dt><dd>4 students</dd></div>
+        <div><dt>Equipment</dt><dd>Compressor, pressure transducers</dd></div>
+        <div><dt>Course</dt><dd>ME 347, Cal Poly</dd></div>
+      </dl>
+    </header>
+
+    <figure class="cs-hero cs-hero--contain">
+      <img src="../images/Compressible Nozzle/compressible-flow-apparatus.png" alt="Centrifugal compressor connected to the transparent converging-diverging nozzle and pressure instrumentation">
+    </figure>
+
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Rocket and jet nozzles depend on choked flow, where the throat hits the speed of sound and the flow can&rsquo;t increase any further.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Measured pressure at three points across compressor settings and compared two flow models.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>Pinpointed choking with a measured pressure ratio of 0.537 vs. 0.528 in theory, and traced the &ldquo;supersonic&rdquo; reading to the sensor&rsquo;s true location.</p>
+      </article>
+    </section>
+
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>Mach 1</strong><span>reached at the throat</span></div>
+      <div><strong>1.7%</strong><span>from the theoretical choking ratio</span></div>
+      <div><strong>3</strong><span>pressure stations</span></div>
+      <div><strong>2</strong><span>flow models compared</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps cs-steps--contain">
+        <li>
+          <img src="../images/Compressible Nozzle/nozzle-schematic.png" alt="Nozzle schematic with inlet, throat, and outlet pressure taps" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Instrument</h3><p>Placed pressure sensors at the inlet, throat, and outlet.</p></div>
+        </li>
+        <li>
+          <img src="../images/Compressible Nozzle/pressure-ratio.png" alt="Throat pressure ratio falling as mass flow increases" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Ramp</h3><p>Raised the flow and watched the throat pressure drop toward the limit.</p></div>
+        </li>
+        <li>
+          <img src="../images/Compressible Nozzle/mach-number.png" alt="Throat Mach number rising toward one, compared with two models" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Model</h3><p>Showed the compressible model beats the simple one at high speed.</p></div>
+        </li>
+        <li><div><span class="cs-step-num">04</span><h3>Investigate</h3><p>Used two plots and physics limits to explain an &ldquo;impossible&rdquo; reading.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Compressible flow</li>
+        <li>Pressure instrumentation</li>
+        <li>Model validation</li>
+        <li>Data analysis</li>
+        <li>Troubleshooting</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">Worked with a team of four on this lab, and I tested a converging-diverging nozzle across a series of compressor settings. We used pressure ratios to identify choking, calculated throat Mach number, and compared incompressible and compressible one-dimensional models.</p>
     <section class="fea-section">
       <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Instrument the nozzle</h2><p class="fea-section-kicker">Three pressure stations across a controlled restriction</p></div></div>
       <div class="fea-copy"><p>A four-stage centrifugal compressor pulled air through the nozzle. Pressure transducers measured vacuum pressure at the inlet, throat, and outlet while atmospheric pressure and temperature established the absolute reference and air properties.</p><p>The measured throat diameter was 9.481 mm, smaller than the nominal 10 mm. Retaining both dimensions in the analysis helped separate geometry sensitivity from model behavior.</p></div>
@@ -154,7 +224,14 @@
       <div class="fea-copy"><p>At the highest compressor settings, the measured pressure ratio dropped below 0.528 and the direct calculation returned Mach numbers slightly above one. That result cannot describe the true minimum-area throat, where choked flow should remain at Mach 1.</p><p>The most likely explanation is that the labeled throat pressure tap sits slightly downstream in the diverging section. There, the flow can continue accelerating and static pressure can fall below the true throat value.</p></div>
       <div class="fea-callout"><strong>Engineering takeaway:</strong> the anomaly did not invalidate the experiment. Combining physical constraints with two independent plots turned it into evidence about the sensor's actual location.</div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/vandenberg-internship.html"><span>Next project</span>Vandenberg P-40 Display Restoration &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

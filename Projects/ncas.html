@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,29 +125,87 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page ncas-page">
+  <main id="main-content" class="project-page fea-page ncas-page cs-page" style="--cs-accent: var(--cat-design)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">Systems / Leadership</p>
-    <h1>NASA NCAS Mission Experience</h1>
-    <p class="project-subtitle">Mission research to simulated Mars systems design | Sep 2024 - Feb 2025</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">NASA Community College Aerospace Scholars &middot; 2024&ndash;2025</p>
+      <h1>Led a simulated Mars mission through a redesign, and finished under budget.</h1>
+      <p class="cs-lead">As project manager for Ares Abode, I kept research, engineering, schedule, and a simulated budget connected when our first mission design failed, and steered the team to a mission that worked.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Mission Research</span>
-      <span class="fea-tag">Systems Engineering</span>
-      <span class="fea-tag">Project Management</span>
-      <span class="fea-tag">Budgeting</span>
-      <span class="fea-tag">Technical Communication</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Project manager</dd></div>
+        <div><dt>Program</dt><dd>NASA NCAS</dd></div>
+        <div><dt>Team</dt><dd>Multidisciplinary</dd></div>
+        <div><dt>Timeline</dt><dd>Sep 2024 &ndash; Feb 2025</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero ncas-hero">
+    <figure class="cs-hero">
       <img src="../images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode simulated Mars mission poster with mission design, scheduling, budgeting, and subsystem decisions">
     </figure>
 
-    <p class="fea-intro">
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Plan a crewed mission that sets up a lasting research presence on Mars, within a fixed simulated budget.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Managed the team, schedule, and budget, and led the recovery when our first mission design failed.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>The final design met its power needs and finished with $5M of budget left and no fines.</p>
+      </article>
+    </section>
+
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>$440M</strong><span>simulated funding awarded</span></div>
+      <div><strong>$5M</strong><span>budget left after the redesign</span></div>
+      <div><strong>0</strong><span>budget fines</span></div>
+      <div><strong>2</strong><span>crewed launch vehicles planned</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps">
+        <li>
+          <img src="../images/NCAS/ncas-stage-one-research.jpg" alt="NCAS Stage One infographic about ESDMD, Orion, Artemis missions, and flight systems engineering" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Research</h3><p>Studied NASA&rsquo;s Orion spacecraft and the Artemis program.</p></div>
+        </li>
+        <li>
+          <img src="../images/NCAS/mars mission emblem.jpg" alt="Ares Abode Mars mission emblem" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Plan</h3><p>Defined the Ares Abode mission and its research goals.</p></div>
+        </li>
+        <li>
+          <img src="../images/NCAS/mars mission team photo.jpg" alt="NCAS Ares Abode mission team in a virtual meeting" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Lead</h3><p>Coordinated the team as project manager across every subsystem.</p></div>
+        </li>
+        <li>
+          <img src="../images/NCAS/ncas-stage-two-ares-abode.jpg" alt="Ares Abode final mission poster" loading="lazy">
+          <div><span class="cs-step-num">04</span><h3>Recover</h3><p>Redesigned after a failed first attempt and delivered on budget.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Project management</li>
+        <li>Systems engineering</li>
+        <li>Budgeting</li>
+        <li>Team leadership</li>
+        <li>Technical communication</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">
       My NASA Community College Aerospace Scholars experience progressed through two connected stages. I first researched a real NASA mission directorate, spacecraft, and engineering career. I then applied that systems-level perspective as project manager for Ares Abode, a multidisciplinary simulated mission to establish a sustainable research presence on Mars.
     </p>
-
     <section class="fea-section">
       <div class="fea-section-heading">
         <span class="fea-section-number">01</span>
@@ -358,7 +417,14 @@
         <strong>Key takeaway:</strong> A mission succeeds when research, engineering, budget, schedule, and communication remain connected as the design changes.
       </div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/Bottling%20Station.html"><span>Next project</span>Automated Bottling Station &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

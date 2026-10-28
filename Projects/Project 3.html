@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -125,30 +126,75 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page carrier-page">
+  <main id="main-content" class="project-page fea-page carrier-page cs-page" style="--cs-accent: var(--cat-design)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">User-centered design / Prototype</p>
-    <h1>Ergonomic Bottle Carrier</h1>
-    <p class="project-subtitle">Functional transport and inversion prototype | Jun–Jul 2025</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Product design &middot; Prototype &middot; 2025</p>
+      <h1>Built a cart that moves and flips a 5-gallon water jug for you.</h1>
+      <p class="cs-lead">Lifting and tipping a heavy water bottle into place is awkward and risky. I designed and built a wheeled carrier that transports the bottle and inverts it using leverage instead of a straight lift.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Product Design</span>
-      <span class="fea-tag">User Interviews</span>
-      <span class="fea-tag">Concept Development</span>
-      <span class="fea-tag">Fabrication</span>
-      <span class="fea-tag">User Testing</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Designer &amp; builder</dd></div>
+        <div><dt>Timeline</dt><dd>Jun&ndash;Jul 2025</dd></div>
+        <div><dt>Process</dt><dd>Interviews to prototype</dd></div>
+        <div><dt>Outcome</dt><dd>Working prototype</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero carrier-hero">
-      <img src="../images/Bottle Carrier/Fulll Prototype.jpg" alt="Finished mobile water-bottle carrier and inverter prototype">
-      <figcaption>Built prototype with a wheeled base, angled handle, and supported crate for a 5-gallon bottle.</figcaption>
+    <figure class="cs-hero">
+      <img class="media-focus--carrier" src="../images/Bottle Carrier/Fulll Prototype.jpg" alt="Finished mobile water-bottle carrier and inverter prototype">
     </figure>
 
-    <p class="fea-intro">
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Lifting and inverting a full 5-gallon bottle strains the back and can slip out of control.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Interviewed users, sketched concepts, and built a wheeled frame with a crate mount and a long lever handle.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>A working prototype that moves the bottle and tips it into position without an unsupported lift.</p>
+      </article>
+    </section>
+
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>5 gal</strong><span>water bottle handled</span></div>
+      <div><strong>3</strong><span>design goals: transport, control, leverage</span></div>
+      <div><strong>2</strong><span>months from idea to prototype</span></div>
+      <div><strong>1</strong><span>working prototype built</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps">
+        <li><div><span class="cs-step-num">01</span><h3>Listen</h3><p>Interviewed users to find the hardest parts of the task: lifting, control, and flipping.</p></div></li>
+        <li><div><span class="cs-step-num">02</span><h3>Sketch</h3><p>Drew a frame that pairs a wheeled base with a long handle for leverage.</p></div></li>
+        <li><div><span class="cs-step-num">03</span><h3>Build</h3><p>Fabricated the frame with a crate mount that holds the bottle in place.</p></div></li>
+        <li><div><span class="cs-step-num">04</span><h3>Test</h3><p>Tried it with real loads and refined the design.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>User interviews</li>
+        <li>Concept sketching</li>
+        <li>Product design</li>
+        <li>Fabrication</li>
+        <li>User testing</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">
       The project addressed a physical handling problem: moving and inverting a heavy 5-gallon water bottle without relying on a direct lift. I worked through the complete design cycle—from user interviews and concept sketches to fabrication, testing, and refinement.
     </p>
-
     <section class="fea-section">
       <div class="fea-section-heading">
         <span class="fea-section-number">01</span>
@@ -199,7 +245,14 @@
       </div>
       <div class="fea-callout"><strong>Engineering takeaway:</strong> A successful handling aid must manage the user’s motion and the load’s motion at the same time. Stable geometry, retention, and leverage are one connected system.</div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/ncas.html"><span>Next project</span>Ares Abode &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

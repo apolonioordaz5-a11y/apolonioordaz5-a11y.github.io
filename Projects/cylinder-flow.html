@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,22 +125,24 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page cylinder-page">
+  <main id="main-content" class="project-page fea-page cylinder-page cs-page" style="--cs-accent: var(--cat-fluids)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">Experimental fluid mechanics / Wind tunnel</p>
-    <h1>Cylinder in a uniform flow</h1>
-    <p class="project-subtitle">Pressure distribution, wake velocity, and drag estimation | ME 347 | Cal Poly San Luis Obispo</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Wind tunnel testing &middot; ME 347 &middot; Cal Poly</p>
+      <h1>Measured the drag on a cylinder two different ways.</h1>
+      <p class="cs-lead">In Cal Poly&rsquo;s wind tunnel, my team of four measured air pressure around a cylinder and the wake behind it. One method matched published data and the other didn&rsquo;t. Figuring out why was the real lesson.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Wind Tunnel Testing</span>
-      <span class="fea-tag">Pressure Measurement</span>
-      <span class="fea-tag">Wake Survey</span>
-      <span class="fea-tag">Numerical Integration</span>
-      <span class="fea-tag">Experimental Validation</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Testing &amp; analysis</dd></div>
+        <div><dt>Team</dt><dd>4 students</dd></div>
+        <div><dt>Equipment</dt><dd>Wind tunnel, Pitot-static probe</dd></div>
+        <div><dt>Course</dt><dd>ME 347, Cal Poly</dd></div>
+      </dl>
+    </header>
 
-    <figure class="flow-hero" aria-labelledby="flow-hero-caption">
+    <figure class="cs-hero cs-hero--legacy">
+      <figure class="flow-hero" aria-labelledby="flow-hero-caption">
       <svg viewBox="0 0 1000 520" role="img" aria-labelledby="flow-title flow-desc">
         <title id="flow-title">Flow over a pressure-tapped circular cylinder</title>
         <desc id="flow-desc">Parallel streamlines approach a circular cylinder, split around it, and form an expanding wake downstream. Pressure tap locations are shown around the cylinder.</desc>
@@ -162,9 +165,55 @@
       </svg>
       <figcaption id="flow-hero-caption">Test article and measurement logic — pressure taps map the surface load; a traversing Pitot-static probe maps the downstream wake.</figcaption>
     </figure>
+    </figure>
 
-    <p class="fea-intro">Worked with a team of four on this lab, and I measured how air moves around a brass cylinder and compared two independent drag estimates. The pressure result matched published behavior; the wake result did not, making measurement quality as important as the final number.</p>
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Drag is hard to measure directly, so engineers infer it from pressure. But which measurement can you trust?</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Recorded surface pressure every 10&deg; around the cylinder and surveyed the wake at two distances behind it.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>The pressure data matched known behavior. I traced the wake mismatch to specific measurement error sources.</p>
+      </article>
+    </section>
 
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>19</strong><span>surface pressure points</span></div>
+      <div><strong>13.75</strong><span>m/s wind speed</span></div>
+      <div><strong>2</strong><span>independent drag methods</span></div>
+      <div><strong>2</strong><span>wake survey stations</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps">
+        <li><div><span class="cs-step-num">01</span><h3>Set up</h3><p>Mounted a brass cylinder across the flow and located its stagnation point.</p></div></li>
+        <li><div><span class="cs-step-num">02</span><h3>Measure</h3><p>Recorded pressure every 10&deg; from front to back.</p></div></li>
+        <li><div><span class="cs-step-num">03</span><h3>Survey</h3><p>Traversed a probe through the wake at two downstream distances.</p></div></li>
+        <li><div><span class="cs-step-num">04</span><h3>Compare</h3><p>Computed drag both ways and explained why they disagreed.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Wind tunnel testing</li>
+        <li>Pressure measurement</li>
+        <li>Wake surveys</li>
+        <li>Numerical integration</li>
+        <li>Error analysis</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">Worked with a team of four on this lab, and I measured how air moves around a brass cylinder and compared two independent drag estimates. The pressure result matched published behavior; the wake result did not, making measurement quality as important as the final number.</p>
     <section class="fea-section">
       <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Test setup and method</h2><p class="fea-section-kicker">One cylinder, two ways to measure drag</p></div></div>
       <div class="fea-copy">
@@ -221,7 +270,14 @@
         <p>A stronger repeat test would re-zero the transducer before each traverse, verify probe alignment, extend the survey beyond the full velocity deficit, and repeat multiple passes to quantify the unsteadiness of the wake.</p>
       </div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/duct-bend-flow.html"><span>Next project</span>Flow Through a 90-Degree Bend &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

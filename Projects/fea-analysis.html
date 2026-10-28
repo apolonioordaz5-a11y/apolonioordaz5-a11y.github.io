@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,29 +125,87 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page">
+  <main id="main-content" class="project-page fea-page cs-page" style="--cs-accent: var(--cat-analysis)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">Simulation / Validation</p>
-    <h1>Finite Element Analysis Studies</h1>
-    <p class="project-subtitle">SolidWorks Simulation | ME 328 | Cal Poly San Luis Obispo</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Simulation &middot; ME 328 &middot; Cal Poly San Luis Obispo</p>
+      <h1>Proved simulations could be trusted, then used them to design.</h1>
+      <p class="cs-lead">Simulation software always produces a colorful answer, but not always a correct one. Across four studies, I checked SolidWorks models against hand calculations, fixed what was wrong, and used the verified models to choose lighter, stronger designs.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Model Validation</span>
-      <span class="fea-tag">Mesh Convergence</span>
-      <span class="fea-tag">Structural Optimization</span>
-      <span class="fea-tag">Stress Concentrations</span>
-      <span class="fea-tag">Buckling</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Modeling &amp; analysis</dd></div>
+        <div><dt>Tool</dt><dd>SolidWorks Simulation</dd></div>
+        <div><dt>Scope</dt><dd>4 studies</dd></div>
+        <div><dt>Course</dt><dd>ME 328, Cal Poly</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero">
+    <figure class="cs-hero cs-hero--contain">
       <img src="../images/FEA/stress-concentration-hero.png" alt="SolidWorks von Mises stress contour showing a stress concentration at a fillet">
     </figure>
 
-    <p class="fea-intro">
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>A simulation can look convincing and still be wrong. The wrong supports or a coarse mesh quietly skew every result.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Matched a beam model to hand calculations, optimized a wing spar, reduced stress at fillets, and compared buckling supports.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>Simulation agreed with theory within 0.04%. I recommended the lightest, cheapest spar that met its stiffness target and cut peak stress by up to 35.5%.</p>
+      </article>
+    </section>
+
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>0.04%</strong><span>difference from hand calculations</span></div>
+      <div><strong>35.5%</strong><span>peak stress reduction</span></div>
+      <div><strong>4</strong><span>structural studies</span></div>
+      <div><strong>3</strong><span>element types compared</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps cs-steps--contain">
+        <li>
+          <img src="../images/FEA/solid-mesh-convergence.png" alt="Plot of stress and deflection convergence as element size decreases" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Validate</h3><p>Fixed the supports and refined the mesh until the model matched hand calculations.</p></div>
+        </li>
+        <li>
+          <img src="../images/FEA/wing-spar-loading.png" alt="Cantilever wing spar with lift distribution and engine point load" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Optimize</h3><p>Compared wing-spar designs for weight, cost, and stiffness.</p></div>
+        </li>
+        <li>
+          <img src="../images/FEA/stress-concentration-hero.png" alt="Stress contour at a fillet" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Reduce stress</h3><p>Tested fillet sizes from 0.2 to 16 in to tame stress concentrations.</p></div>
+        </li>
+        <li>
+          <img src="../images/FEA/buckling-pinned-pinned.png" alt="Pinned-pinned column buckling mode shape" loading="lazy">
+          <div><span class="cs-step-num">04</span><h3>Check stability</h3><p>Showed how support conditions change a column&rsquo;s buckling behavior.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>SolidWorks Simulation</li>
+        <li>Finite element analysis</li>
+        <li>Mesh convergence</li>
+        <li>Hand calculations</li>
+        <li>Design optimization</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">
       Finite element analysis is useful only when the model represents the real structure and its results can be defended. Across four studies, I built and validated SolidWorks Simulation models, compared element and boundary-condition choices, and used the verified results to evaluate stiffness, stress, weight, cost, and stability.
     </p>
-
     <section class="fea-section">
       <div class="fea-section-heading">
         <span class="fea-section-number">01</span>
@@ -377,7 +436,14 @@
       </div>
 
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/knee-scooter.html"><span>Next project</span>PVC Knee Scooter &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

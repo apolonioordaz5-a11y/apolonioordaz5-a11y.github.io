@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,32 +125,73 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page bottling-page">
+  <main id="main-content" class="project-page fea-page bottling-page cs-page" style="--cs-accent: var(--cat-design)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">CAD / Motion</p>
-    <h1>Bottling Station</h1>
-    <p class="project-subtitle">SolidWorks assembly and motion analysis</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">CAD &middot; Motion study &middot; SolidWorks</p>
+      <h1>Brought an automated bottling machine to life in CAD.</h1>
+      <p class="cs-lead">I assembled a full bottling station from individual parts, defined how every piece moves, and ran a motion study to prove bottles advance correctly, catching problems before anything gets built.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">SolidWorks</span>
-      <span class="fea-tag">Assembly Design</span>
-      <span class="fea-tag">Mechanical Mates</span>
-      <span class="fea-tag">Motion Study</span>
-      <span class="fea-tag">System Verification</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>CAD &amp; motion analysis</dd></div>
+        <div><dt>Tool</dt><dd>SolidWorks</dd></div>
+        <div><dt>Focus</dt><dd>Assembly &amp; motion study</dd></div>
+        <div><dt>Output</dt><dd>Animated, verified assembly</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero bottling-hero" id="motion-study">
+    <figure class="cs-hero cs-hero--legacy">
+      <figure class="fea-hero bottling-hero" id="motion-study">
       <video class="bottling-video" controls autoplay muted loop playsinline preload="metadata" poster="../images/Bottleing%20Station/bottling%20station%20drawing.png" aria-label="SolidWorks motion study of the automated bottling station">
         <source src="../images/Bottleing%20Station/Bottling%20Station.mp4" type="video/mp4">
         Your browser does not support embedded video.
       </video>
     </figure>
+    </figure>
 
-    <p class="fea-intro">
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>A pile of separate CAD parts doesn&rsquo;t show whether a machine will actually work.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Assembled the station, defined how each part moves, and drove it through its full indexing sequence.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>A working digital machine that checks alignment and clearances before fabrication.</p>
+      </article>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps">
+        <li><div><span class="cs-step-num">01</span><h3>Assemble</h3><p>Combined the supplied components into one complete station.</p></div></li>
+        <li><div><span class="cs-step-num">02</span><h3>Constrain</h3><p>Defined how each part can move without over-constraining the model.</p></div></li>
+        <li><div><span class="cs-step-num">03</span><h3>Animate</h3><p>Drove the mechanism through its full indexed sequence.</p></div></li>
+        <li><div><span class="cs-step-num">04</span><h3>Verify</h3><p>Checked alignment, clearances, and part interaction.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>SolidWorks</li>
+        <li>Assembly design</li>
+        <li>Mechanical mates</li>
+        <li>Motion studies</li>
+        <li>Engineering drawings</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">
       This project brought a collection of individual SolidWorks components together into a coordinated mechanical system. I assembled the station, constrained its moving parts, and built a motion study to evaluate how bottles advance through an indexed operating sequence.
     </p>
-
     <section class="fea-section">
       <div class="fea-section-heading">
         <span class="fea-section-number">01</span>
@@ -270,7 +312,14 @@
         <strong>Takeaway:</strong> Motion analysis turns an assembly from a collection of correctly placed parts into a testable mechanical system. It creates an early opportunity to find constraint, alignment, and interaction problems before fabrication.
       </div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/cylinder-flow.html"><span>Next project</span>Cylinder in Uniform Flow &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

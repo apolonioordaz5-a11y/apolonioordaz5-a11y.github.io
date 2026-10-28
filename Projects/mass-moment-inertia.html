@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,28 +125,85 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page inertia-page">
+  <main id="main-content" class="project-page fea-page inertia-page cs-page" style="--cs-accent: var(--cat-analysis)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">Experimental dynamics / Method validation</p>
-    <h1>B-2 mass moment of inertia</h1>
-    <p class="project-subtitle">Torsional vibration and pendulum testing | Cal Poly San Luis Obispo</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Experimental dynamics &middot; Cal Poly San Luis Obispo</p>
+      <h1>Measured how a B-2 bomber model resists rotation.</h1>
+      <p class="cs-lead">Engineers need to know how an aircraft&rsquo;s mass is spread out to predict how it handles. With a teammate, I measured a B-2 Spirit model&rsquo;s roll and yaw inertia, after first proving our test methods on a board we could check by hand.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Dynamics</span>
-      <span class="fea-tag">Torsional Vibration</span>
-      <span class="fea-tag">Physical Pendulum</span>
-      <span class="fea-tag">Experimental Validation</span>
-      <span class="fea-tag">Uncertainty Analysis</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Testing &amp; data analysis</dd></div>
+        <div><dt>Team</dt><dd>With Bryan Figueroa</dd></div>
+        <div><dt>Methods</dt><dd>Torsion &amp; pendulum tests</dd></div>
+        <div><dt>School</dt><dd>Cal Poly SLO</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero inertia-hero">
+    <figure class="cs-hero">
       <img src="../images/Mass Moment Inertia/b2-torsion-hero.png" alt="B-2 Spirit model suspended in the torsional vibration test fixture">
-      <figcaption>B-2 model mounted for the torsional vibration test. The suspension axis was changed to measure roll and yaw inertia.</figcaption>
     </figure>
 
-    <p class="fea-intro">Working with Bryan Figueroa, I measured the mass moment of inertia of a B-2 Spirit model about its roll and yaw axes. We first tested both methods on a rectangular wood board with known theoretical inertia, then used the better validated method for the aircraft model.</p>
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>A B-2&rsquo;s complex shape has no simple formula for its inertia. The only way to know it is to measure it, and to trust the measurement.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Proved two test methods on a wood board with a known answer, then used the more reliable method on the B-2 model.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>Board results landed as close as 3.56% to theory. I delivered roll and yaw values for the B-2 and pinpointed how to shrink the biggest source of error.</p>
+      </article>
+    </section>
 
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>3.56%</strong><span>closest match to theory</span></div>
+      <div><strong>2</strong><span>test methods compared</span></div>
+      <div><strong>2</strong><span>axes measured: roll and yaw</span></div>
+      <div><strong>~10&times;</strong><span>error amplification found and explained</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps">
+        <li>
+          <img src="../images/Mass Moment Inertia/wood-torsion-y.jpg" alt="Wood board suspended horizontally for the torsional vibration test" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Validate</h3><p>Tested both methods on a wood board whose inertia we could calculate.</p></div>
+        </li>
+        <li>
+          <img src="../images/Mass Moment Inertia/b2-torsion-overview.png" alt="B-2 model positioned in the torsional vibration test fixture" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Measure</h3><p>Hung the B-2 from wires and timed its twisting oscillations about each axis.</p></div>
+        </li>
+        <li>
+          <img src="../images/Mass Moment Inertia/b2-pendulum-yaw.png" alt="B-2 model suspended vertically for the yaw pendulum test" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Cross-check</h3><p>Swung the model as a pendulum for an independent yaw measurement.</p></div>
+        </li>
+        <li>
+          <img src="../images/Mass Moment Inertia/wood-pendulum-side.png" alt="Side view of the wood board pendulum test setup" loading="lazy">
+          <div><span class="cs-step-num">04</span><h3>Improve</h3><p>Showed a 1% timing error becomes ~10% inertia error, and recommended fixes like a photogate.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Experimental design</li>
+        <li>Dynamics</li>
+        <li>Method validation</li>
+        <li>Uncertainty analysis</li>
+        <li>Technical reporting</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">Working with Bryan Figueroa, I measured the mass moment of inertia of a B-2 Spirit model about its roll and yaw axes. We first tested both methods on a rectangular wood board with known theoretical inertia, then used the better validated method for the aircraft model.</p>
     <section class="fea-section">
       <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Validate the measurement</h2><p class="fea-section-kicker">Known geometry before complex geometry</p></div></div>
       <div class="fea-copy">
@@ -225,7 +283,14 @@
         <p>The disagreement between yaw methods also showed why repeatability alone is not enough. A stable period can still produce a biased result when the equation magnifies small setup errors.</p>
       </div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/fea-analysis.html"><span>Next project</span>Finite Element Analysis Studies &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -122,13 +123,82 @@
       </div>
     </nav>
   </div>
-  <main id="main-content" class="project-page fea-page boundary-page">
+  <main id="main-content" class="project-page fea-page boundary-page cs-page" style="--cs-accent: var(--cat-fluids)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
-    <p class="project-code">External flow / Boundary-layer measurement</p><h1>Boundary layer growth over a flat plate</h1>
-    <p class="project-subtitle">Pitot-static velocity profiles, integral thicknesses, and drag estimation | ME 347 | Cal Poly San Luis Obispo</p>
-    <div class="fea-tags" aria-label="Project skills"><span class="fea-tag">Wind Tunnel</span><span class="fea-tag">Pitot-Static Traverse</span><span class="fea-tag">Boundary Layers</span><span class="fea-tag">Numerical Integration</span><span class="fea-tag">Drag Estimation</span></div>
-    <figure class="fea-hero boundary-hero"><img src="../images/Boundary Layer/wind-tunnel-apparatus.png" alt="Low-speed wind tunnel with a flat plate, Pitot-static traverse, and inclined manometer"><figcaption>The traverse positioned a Pitot-static probe at precise heights above the plate at two downstream stations.</figcaption></figure>
-    <p class="fea-intro">Worked with a team of four on this lab, and I measured the velocity field developing over a flat plate. The profiles let us track boundary-layer growth, calculate displacement and momentum thickness, and compare the resulting drag estimate with laminar and turbulent theory.</p>
+
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Wind tunnel testing &middot; ME 347 &middot; Cal Poly</p>
+      <h1>Measured the thin layer of air that creates surface drag.</h1>
+      <p class="cs-lead">Friction drag comes from a layer of slowed air too thin to see. With a team of four, I traced airspeed millimeter by millimeter above a flat plate, watched that layer grow, and turned it into a drag estimate.</p>
+
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Testing &amp; analysis</dd></div>
+        <div><dt>Team</dt><dd>4 students</dd></div>
+        <div><dt>Equipment</dt><dd>Wind tunnel, Pitot-static traverse</dd></div>
+        <div><dt>Course</dt><dd>ME 347, Cal Poly</dd></div>
+      </dl>
+    </header>
+
+    <figure class="cs-hero cs-hero--contain">
+      <img src="../images/Boundary Layer/wind-tunnel-apparatus.png" alt="Low-speed wind tunnel with a flat plate, Pitot-static traverse, and inclined manometer">
+    </figure>
+
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Skin-friction drag comes from a thin layer of slow air near a surface that you can&rsquo;t see.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Moved a probe up from the plate in small steps at two locations and converted the readings into velocity profiles.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>Measured the layer growing from 2.8 mm to 4.5 mm and calculated drag, cross-checked against laminar and turbulent theory.</p>
+      </article>
+    </section>
+
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>20</strong><span>m/s wind speed</span></div>
+      <div><strong>2.8&rarr;4.5</strong><span>mm boundary-layer growth</span></div>
+      <div><strong>2</strong><span>measurement stations</span></div>
+      <div><strong>2</strong><span>theories compared</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps cs-steps--contain">
+        <li>
+          <img src="../images/Boundary Layer/wind-tunnel-apparatus.png" alt="Wind tunnel with Pitot-static traverse" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Traverse</h3><p>Stepped a Pitot-static probe away from the plate at two stations.</p></div>
+        </li>
+        <li>
+          <img src="../images/Boundary Layer/profile-11-5cm.png" alt="Velocity profile at 11.5 centimeters" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Profile</h3><p>Turned pressure readings into velocity profiles.</p></div>
+        </li>
+        <li>
+          <img src="../images/Boundary Layer/profile-21-5cm.png" alt="Velocity profile at 21.5 centimeters" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Compare</h3><p>Checked the profiles against laminar and turbulent theory.</p></div>
+        </li>
+        <li><div><span class="cs-step-num">04</span><h3>Estimate drag</h3><p>Calculated drag from how much momentum the layer lost.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Wind tunnel testing</li>
+        <li>Pitot-static measurement</li>
+        <li>Boundary-layer theory</li>
+        <li>Numerical integration</li>
+        <li>Drag estimation</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">Worked with a team of four on this lab, and I measured the velocity field developing over a flat plate. The profiles let us track boundary-layer growth, calculate displacement and momentum thickness, and compare the resulting drag estimate with laminar and turbulent theory.</p>
     <section class="fea-section">
       <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Traverse the velocity profile</h2><p class="fea-section-kicker">Two stations, one developing boundary layer</p></div></div>
       <div class="fea-copy"><p>A Pitot-static tube moved outward from the plate in small increments at x = 11.5 cm and x = 21.5 cm. Manometer deflection was converted to dynamic pressure and local velocity, with the plateau defining the free stream.</p><p>The free-stream speed was approximately 20.03 m/s. Boundary-layer thickness was identified where the local velocity reached 99% of that value.</p></div>
@@ -154,7 +224,14 @@
       <div class="fea-copy"><p>The experimental thickness stayed between the laminar and turbulent predictions, while the velocity shape leaned turbulent and the drag metrics leaned laminar. Together, those results point to a transitional boundary layer. The largest uncertainty came from resolving velocity very near the wall, compounded by wind-tunnel interruptions during the traverse.</p></div>
       <div class="fea-callout"><strong>Engineering takeaway:</strong> no single metric defined the regime. Comparing profile shape, integral thicknesses, Reynolds number, and drag produced a more defensible conclusion than any one result alone.</div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/converging-diverging-nozzle.html"><span>Next project</span>Converging-Diverging Nozzle &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,28 +125,85 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page duct-page">
+  <main id="main-content" class="project-page fea-page duct-page cs-page" style="--cs-accent: var(--cat-fluids)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">Internal flow / Pressure measurement</p>
-    <h1>Flow through a 90-degree duct bend</h1>
-    <p class="project-subtitle">Pressure distribution, model comparison, and bend losses | ME 347 | Cal Poly San Luis Obispo</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Internal flow &middot; ME 347 &middot; Cal Poly</p>
+      <h1>Mapped how airflow pressure shifts through a 90&deg; turn.</h1>
+      <p class="cs-lead">Every bend in a duct costs energy. With a team of four, I measured pressure at 30 points around a bend, compared it with two textbook models, and quantified exactly how much the turn costs.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Internal Flow</span>
-      <span class="fea-tag">Manometer Testing</span>
-      <span class="fea-tag">Pressure Taps</span>
-      <span class="fea-tag">Loss Coefficients</span>
-      <span class="fea-tag">Model Validation</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Testing &amp; analysis</dd></div>
+        <div><dt>Team</dt><dd>4 students</dd></div>
+        <div><dt>Equipment</dt><dd>Airflow bench, manometer</dd></div>
+        <div><dt>Course</dt><dd>ME 347, Cal Poly</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero duct-hero">
+    <figure class="cs-hero cs-hero--contain">
       <img src="../images/Duct Flow/duct-apparatus.png" alt="Airflow box feeding a rectangular duct with pressure taps around a 90-degree bend">
-      <figcaption>Airflow bench and instrumented bend. Thirty taps measured pressure along the inner wall, outer wall, and radial direction.</figcaption>
     </figure>
 
-    <p class="fea-intro">Worked with a team of four on this lab, and I measured how a 90-degree turn redistributes pressure across a rectangular duct. We compared the experiment with one- and two-dimensional ideal-flow models and quantified the additional loss caused by the bend.</p>
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Bends in ductwork waste energy, but how much, and why?</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Read 30 pressure taps with a manometer and compared the results to one- and two-dimensional flow models.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>The bend lost about 3&times; the pressure of an equivalent straight duct (78.33 vs. 25.75 Pa), a loss coefficient of K = 0.112.</p>
+      </article>
+    </section>
 
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>30</strong><span>pressure taps measured</span></div>
+      <div><strong>~3&times;</strong><span>loss of a straight duct</span></div>
+      <div><strong>34</strong><span>m/s airflow</span></div>
+      <div><strong>2</strong><span>flow models compared</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps cs-steps--contain">
+        <li>
+          <img src="../images/Duct Flow/duct-apparatus.png" alt="Duct bend test apparatus" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Measure</h3><p>Recorded pressure along the inner wall, outer wall, and across the bend.</p></div>
+        </li>
+        <li>
+          <img src="../images/Duct Flow/wall-pressure.png" alt="Gauge pressure along the inner and outer walls of the bend" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Map</h3><p>Showed how the turn pushes pressure up outside and down inside.</p></div>
+        </li>
+        <li>
+          <img src="../images/Duct Flow/inner-wall-model.png" alt="Experimental and model pressure along the inner wall" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Compare</h3><p>Checked the data against two ideal-flow models.</p></div>
+        </li>
+        <li>
+          <img src="../images/Duct Flow/radial-pressure-model.png" alt="Radial pressure data compared with the model" loading="lazy">
+          <div><span class="cs-step-num">04</span><h3>Quantify</h3><p>Calculated the extra energy loss caused by the bend.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Pressure measurement</li>
+        <li>Manometry</li>
+        <li>Flow modeling</li>
+        <li>Loss analysis</li>
+        <li>Data visualization</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">Worked with a team of four on this lab, and I measured how a 90-degree turn redistributes pressure across a rectangular duct. We compared the experiment with one- and two-dimensional ideal-flow models and quantified the additional loss caused by the bend.</p>
     <section class="fea-section">
       <div class="fea-section-heading"><span class="fea-section-number">01</span><div><h2>Apparatus and reduction</h2><p class="fea-section-kicker">Thirty pressure taps across one curved flow path</p></div></div>
       <div class="fea-copy">
@@ -211,7 +269,14 @@
       </div>
       <div class="fea-callout"><strong>Engineering takeaway:</strong> both ideal models explained the dominant pressure pattern, but their residual error contained useful information about real losses and secondary flow.</div>
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/boundary-layer-flow.html"><span>Next project</span>Boundary Layer Over a Flat Plate &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../case-study.css?v=1">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -124,29 +125,88 @@
     </nav>
   </div>
 
-  <main id="main-content" class="project-page fea-page scooter-page">
+  <main id="main-content" class="project-page fea-page scooter-page cs-page" style="--cs-accent: var(--cat-design)">
     <a href="../index.html#projects" class="back-link">&larr; Back to all projects</a>
 
-    <p class="project-code">Design / Analysis / Build</p>
-    <h1>PVC Knee Scooter</h1>
-    <p class="project-subtitle">Mechanical design-build | ME 328 | Cal Poly San Luis Obispo</p>
+    <header class="cs-intro">
+      <p class="cs-eyebrow">Design &middot; Analysis &middot; Build &middot; ME 328, Cal Poly</p>
+      <h1>Designed, built, and tested a knee scooter for $174.</h1>
+      <p class="cs-lead">A stable, low-cost alternative to crutches. With three teammates, I took it from body measurements and hand calculations through two rounds of simulation to a PVC prototype that held about twice its intended load.</p>
 
-    <div class="fea-tags" aria-label="Project skills">
-      <span class="fea-tag">Mechanical Design</span>
-      <span class="fea-tag">Hand Calculations</span>
-      <span class="fea-tag">Finite Element Analysis</span>
-      <span class="fea-tag">Prototype Fabrication</span>
-      <span class="fea-tag">Physical Validation</span>
-    </div>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Design, analysis &amp; build</dd></div>
+        <div><dt>Team</dt><dd>With Daniel Mendes, Chananeth Manava &amp; Hong Dang</dd></div>
+        <div><dt>Material</dt><dd>Schedule 40 PVC</dd></div>
+        <div><dt>Cost</dt><dd>$173.73</dd></div>
+      </dl>
+    </header>
 
-    <figure class="fea-hero">
+    <figure class="cs-hero">
       <img src="../images/Scooter Project/knee-scooter-outdoor-hero.jpg" alt="Completed white PVC knee scooter outdoors, showing the padded knee platform, steering column, and wheel layout">
     </figure>
 
-    <p class="fea-intro">
+    <section class="cs-story" aria-label="Project summary">
+      <article>
+        <p class="cs-label">The problem</p>
+        <p>Someone with a leg injury needs a stable, affordable way to get around without crutches.</p>
+      </article>
+      <article>
+        <p class="cs-label">What I did</p>
+        <p>Sized the frame from body measurements, checked it with hand calculations, and used two rounds of FEA to remove extra material before building it.</p>
+      </article>
+      <article>
+        <p class="cs-label">The result</p>
+        <p>The prototype held about 2&times; its design load, and its measured deflection was under half of what the simulation predicted.</p>
+      </article>
+    </section>
+
+    <section class="cs-stats" aria-label="Highlights">
+      <div><strong>$174</strong><span>total material cost</span></div>
+      <div><strong>~2&times;</strong><span>design load held in testing</span></div>
+      <div><strong>6&ndash;7</strong><span>simulated safety factor</span></div>
+      <div><strong>3</strong><span>load cases analyzed</span></div>
+    </section>
+
+    <section class="cs-section">
+      <h2>How I did it</h2>
+      <ol class="cs-steps">
+        <li>
+          <img src="../images/Scooter Project/knee-scooter-sketch.jpg" alt="Dimensioned hand sketch of the selected knee scooter configuration" loading="lazy">
+          <div><span class="cs-step-num">01</span><h3>Sketch</h3><p>Chose a simple PVC layout that could be built from off-the-shelf fittings.</p></div>
+        </li>
+        <li>
+          <img src="../images/Scooter Project/knee-scooter-cad.jpg" alt="CAD model of the PVC knee scooter frame and steering column" loading="lazy">
+          <div><span class="cs-step-num">02</span><h3>Model</h3><p>Turned the sketch into a CAD model sized from real body measurements.</p></div>
+        </li>
+        <li>
+          <img src="../images/Scooter Project/knee-scooter-fea-2.jpg" alt="Stress and displacement results for the final scooter model" loading="lazy">
+          <div><span class="cs-step-num">03</span><h3>Analyze</h3><p>Ran FEA on three load cases and slimmed the steering column safely.</p></div>
+        </li>
+        <li>
+          <img src="../images/Scooter Project/knee-scooter-loaded-side.jpg" alt="Side view of the PVC knee scooter carrying a backpack from the handlebars" loading="lazy">
+          <div><span class="cs-step-num">04</span><h3>Build &amp; test</h3><p>Built the prototype and load-tested it to confirm the predictions.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>Skills I used</h2>
+      <ul class="cs-skills">
+        <li>Mechanical design</li>
+        <li>SolidWorks CAD</li>
+        <li>Finite element analysis</li>
+        <li>Hand calculations</li>
+        <li>Prototype fabrication</li>
+        <li>Load testing</li>
+      </ul>
+    </section>
+
+    <details class="cs-details">
+      <summary>Full engineering write-up</summary>
+      <div class="cs-details__body">
+        <p class="fea-intro">
       Working with Daniel Mendes, Chananeth Manava, and Hong Dang, I designed, analyzed, built, and tested a low-cost knee scooter from Schedule 40 PVC. The project moved from anthropometric requirements and hand calculations through two FEA iterations, physical fabrication, and test-based validation.
     </p>
-
     <section class="fea-section">
       <div class="fea-section-heading">
         <span class="fea-section-number">01</span>
@@ -403,7 +463,14 @@
       </div>
 
     </section>
-  </main>
+      </div>
+    </details>
+
+    <nav class="cs-next" aria-label="Keep exploring">
+      <a href="../Projects/Project%203.html"><span>Next project</span>Ergonomic Bottle Carrier &rarr;</a>
+      <a href="../index.html#contact"><span>Like what you see?</span>Get in touch &rarr;</a>
+    </nav>
+</main>
 
   <footer class="site-foot">
     <div class="site-foot__inner">
