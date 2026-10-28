@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../style.css?v=8">
-  <link rel="stylesheet" href="../case-study.css?v=3">
+  <link rel="stylesheet" href="../case-study.css?v=4">
 </head>
 <body id="top" class="project-detail">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -138,8 +138,8 @@
       <dl class="cs-facts">
         <div><dt>Role</dt><dd>Manufacturing &amp; integration</dd></div>
         <div><dt>Team</dt><dd>PEPPR</dd></div>
+        <div><dt>Propellant</dt><dd>Krypton</dd></div>
         <div><dt>Status</dt><dd>In manufacturing</dd></div>
-        <div><dt>Next milestone</dt><dd>First full-thruster test</dd></div>
       </dl>
     </header>
 
@@ -169,6 +169,70 @@
       <div><strong>59 mm</strong><span>channel diameter</span></div>
     </section>
     <p class="cs-note">Power, voltage, and thrust are targets from the design model, not measured results.</p>
+
+    <section class="cs-section">
+      <h2>What is a Hall-effect thruster?</h2>
+      <p class="cs-section-lead">A Hall-effect thruster is an electric rocket engine used to move and steer satellites in space. Instead of burning fuel, it uses electricity to turn a gas into plasma and fire it out at very high speed. The push is gentle, about the weight of a few paper clips, but it&rsquo;s extremely fuel-efficient and can run for thousands of hours.</p>
+
+      <figure class="cs-diagram">
+        <svg viewBox="0 0 680 270" role="img" aria-labelledby="het-diagram-title">
+          <title id="het-diagram-title">Cross-section of a Hall-effect thruster: krypton gas enters through the anode, trapped electrons ionize it near the magnetic field, and krypton ions are accelerated out of the channel while the cathode supplies electrons.</title>
+          <g fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="150" y="44" width="290" height="30"/>
+            <rect x="150" y="196" width="290" height="30"/>
+            <path d="M440 92 H150 V178 H440"/>
+          </g>
+          <g fill="currentColor" font-size="14" font-family="Inter, Arial, sans-serif">
+            <text x="295" y="64" text-anchor="middle">Electromagnet</text>
+            <text x="295" y="216" text-anchor="middle">Electromagnet</text>
+          </g>
+          <rect x="160" y="108" width="14" height="54" style="fill: var(--cs-accent)"/>
+          <text x="167" y="252" text-anchor="middle" font-size="14" font-family="Inter, Arial, sans-serif" fill="currentColor">Anode (+)</text>
+          <path d="M167 240 V166" stroke="currentColor" stroke-width="1" stroke-dasharray="3 4"/>
+          <g stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M28 135 H150"/>
+            <path d="M140 128 L152 135 L140 142"/>
+          </g>
+          <text x="28" y="122" font-size="14" font-family="Inter, Arial, sans-serif" fill="currentColor">Krypton gas in</text>
+          <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.6">
+            <path d="M372 92 V178"/><path d="M398 92 V178"/><path d="M424 92 V178"/>
+          </g>
+          <ellipse cx="398" cy="135" rx="30" ry="22" fill="none" style="stroke: var(--cs-accent)" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="398" y="139" text-anchor="middle" font-size="13" font-family="Inter, Arial, sans-serif" style="fill: var(--cs-accent)">e&#8315;</text>
+          <g style="stroke: var(--cs-accent)" stroke-width="2.5" fill="none">
+            <path d="M448 112 H600"/><path d="M590 105 L602 112 L590 119"/>
+            <path d="M448 135 H620"/><path d="M610 128 L622 135 L610 142"/>
+            <path d="M448 158 H600"/><path d="M590 151 L602 158 L590 165"/>
+          </g>
+          <text x="530" y="194" text-anchor="middle" font-size="14" font-family="Inter, Arial, sans-serif" style="fill: var(--cs-accent)">Kr&#8314; ions out</text>
+          <rect x="520" y="14" width="66" height="24" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="553" y="31" text-anchor="middle" font-size="13" font-family="Inter, Arial, sans-serif" fill="currentColor">Cathode</text>
+          <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
+            <path d="M540 40 C520 70 470 90 430 112"/>
+            <path d="M566 40 C575 70 585 90 590 104"/>
+          </g>
+          <text x="470" y="62" font-size="13" font-family="Inter, Arial, sans-serif" fill="currentColor">e&#8315;</text>
+          <g stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M118 252 H28"/><path d="M40 245 L28 252 L40 259"/>
+          </g>
+          <text x="28" y="240" font-size="14" font-family="Inter, Arial, sans-serif" fill="currentColor">Thrust</text>
+        </svg>
+        <figcaption>Simplified cross-section. The real channel is a ring, so this shape wraps all the way around the thruster.</figcaption>
+      </figure>
+
+      <ol class="cs-steps cs-steps--three">
+        <li><div><span class="cs-step-num">01</span><h3>Feed the gas</h3><p>Krypton flows in through the anode at the back of a ring-shaped channel.</p></div></li>
+        <li><div><span class="cs-step-num">02</span><h3>Make plasma</h3><p>Electrons from the cathode get trapped by the magnetic field and knock electrons off the krypton atoms, turning them into ions.</p></div></li>
+        <li><div><span class="cs-step-num">03</span><h3>Push it out</h3><p>An electric field fires the ions out of the channel at about 15&nbsp;km/s (design value), pushing the spacecraft the other way.</p></div></li>
+      </ol>
+
+      <dl class="cs-facts cs-facts--spaced">
+        <div><dt>Why krypton?</dt><dd>Far cheaper and easier to get than xenon, the traditional choice, at the cost of some efficiency.</dd></div>
+        <div><dt>Benchmark</dt><dd>Sized to be similar to the SPT-70, a flight-proven Hall thruster.</dd></div>
+        <div><dt>Test facility</dt><dd>STELLA vacuum chamber, Advanced Technology Lab.</dd></div>
+        <div><dt>Cathode</dt><dd>Heaterless hollow cathode that supplies the electrons.</dd></div>
+      </dl>
+    </section>
 
     <section class="cs-section">
       <h2>How it&rsquo;s coming together</h2>

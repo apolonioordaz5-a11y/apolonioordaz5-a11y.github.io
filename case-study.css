@@ -267,6 +267,35 @@
   line-height: 1.55;
 }
 
+.cs-steps--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Explainer diagram */
+.cs-diagram {
+  margin: 0 0 18px;
+  padding: clamp(16px, 3vw, 32px);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--fg);
+}
+
+.cs-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cs-diagram figcaption {
+  margin-top: 14px;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.cs-facts--spaced {
+  margin-top: 18px;
+}
+
 /* Skills */
 .cs-skills {
   display: flex;
@@ -403,6 +432,10 @@
   .cs-stats,
   .cs-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cs-steps--three {
+    grid-template-columns: 1fr;
   }
 
   .cs-story {
