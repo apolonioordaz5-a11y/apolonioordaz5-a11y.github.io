@@ -2949,6 +2949,31 @@ body:not(.portfolio-home) .masthead {
   object-position: center;
 }
 
+.vandenberg-page .fea-hero img {
+  object-position: center 30%;
+}
+
+@media (min-width: 701px) {
+  .project-detail .vandenberg-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.vandenberg-photo-grid .fea-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.vandenberg-photo-grid .fea-figure--wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.vandenberg-photo-grid .fea-figure--diagram img {
+  max-height: 560px;
+  object-fit: contain;
+  background: #f4f4f4;
+}
+
 .scooter-photo-grid .fea-figure img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
